@@ -1,0 +1,174 @@
+:root {
+  /* fonts */
+  --font-primary: "Ubuntu", sans-serif;
+  --font-secondary: "Lora", serif;
+
+  /* colors */
+  --color-bg: #101010;
+  --color-white: #fff;
+  --color-brand-normal: #f9fbe7;
+  --color-brand-active: #c2d30d;
+
+  /* line-height */
+  --lh-120: 1.2;
+}
+
+.page {
+  font-family: var(--font-primary, sans-serif);
+  background-color: var(--color-bg, #101010);
+}
+
+.container {
+  max-width: 1710px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* HEADER SECTION */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 15px;
+}
+
+.header__menu {
+  color: var(--color-brand-normal);
+  font-size: clamp(1.125rem, 1.6vw, 1.5625rem);
+  line-height: var(--lh-120);
+}
+
+.header__links-list {
+  display: flex;
+  gap: clamp(1.5rem, 5vw, 6.5rem);
+}
+
+.header__link.header__link_active {
+  color: var(--color-brand-active, #c2d30d);
+  text-decoration: none;
+  cursor: default;
+}
+
+.header__logo-image {
+  width: clamp(2.5rem, 4vw, 4.5rem);
+  height: clamp(1.6875rem, 2.7vw, 3rem);
+  object-fit: contain;
+}
+
+/* HERO SECTION */
+.cover {
+  position: relative;
+  min-height: clamp(20rem, 60vh, 34.8125rem);
+  background-image: url(../img/hero-baner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cover__title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2.1875rem, 4.5vw, 3.8125rem);
+  line-height: var(--lh-120);
+  color: var(--color-brand-normal);
+  padding-top: 155px;
+  margin-bottom: 44px;
+  max-width: 977px;
+}
+
+.cover__description {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  line-height: var(--lh-120);
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+  max-width: 547px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* PARTNERS SECTION */
+.partners {
+  margin-top: 64px; 
+  margin-bottom: 119px;
+}
+
+.partners__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.partners__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SERVICES SECTION */
+.services {
+  margin-bottom: 117px;
+  position: relative;
+}
+
+.services__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.services__item {
+  height: 1150px;
+}
+
+.services__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.services__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services__title {
+  color: var(--color-white);
+  font-size: 39px;
+  line-height: var(--lh-120);
+}
+
+.services__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services__card .overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
