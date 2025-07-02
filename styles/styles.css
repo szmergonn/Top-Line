@@ -245,3 +245,76 @@
   line-height: var(--lh-120);
   margin-bottom: 155px;
 }
+
+.portfolio {
+  padding-top: 100px;
+  margin-bottom: 148px;
+}
+
+.portfolio__title {
+  margin-bottom: 50px;
+  font-size: 61px;
+  color: var(--color-brand-normal);
+  line-height: var(--lh-120);
+  max-width: 977px;
+}
+
+.portfolio__carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__carousel .container {
+  padding: 0 calc(20px + 40px + 61px); /* базовый padding + ширина стрелки + отступ */
+}
+
+.portfolio__list {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio__card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio__card:hover .portfolio__image {
+  transform: scale(1.05);
+}
+
+.portfolio__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: var(--color-brand-normal);
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio__arrow--prev {
+  left: 61px;
+}
+
+.portfolio__arrow--next {
+  right: 61px;
+}
+
+.portfolio__arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
