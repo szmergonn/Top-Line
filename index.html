@@ -1,117 +1,175 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="fonts/fonts.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/media.css" />
-    <title>Document</title>
-  </head>
-  <body class="page">
-    <header class="header container">
-      <a class="header__logo">
-        <img class="header__logo-image" src="img/logo.svg" alt="Page Logo" />
-      </a>
-      <nav class="header__menu">
-        <ul class="header__links-list">
-          <li class="header__links-list-item">
-            <a class="header__link header__link_active">Home</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/media.css" />
+  <title>Document</title>
+</head>
+
+<body class="page">
+  <div class="decorative-ellipse"></div>
+  <header class="header container">
+    <a class="header__logo">
+      <img class="header__logo-image" src="img/logo.svg" alt="Page Logo" />
+    </a>
+    <nav class="header__menu">
+      <ul class="header__links-list">
+        <li class="header__links-list-item">
+          <a class="header__link header__link_active">Home</a>
+        </li>
+        <li class="header__links-list-item">
+          <a class="header__link" href="#">Produkty</a>
+        </li>
+        <li class="header__links-list-item">
+          <a class="header__link" href="#">Park maszynowy</a>
+        </li>
+        <li class="header__links-list-item">
+          <a class="header__link" href="#">Realizacje</a>
+        </li>
+        <li class="header__links-list-item">
+          <a class="header__link" href="#">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- section with photo  -->
+    <section class="cover">
+      <div class="container">
+        <h1 class="cover__title">
+          Zachwyć klientów oznakowaniem, którego nie sposób przeoczyć
+        </h1>
+        <p class="cover__description">
+          Projektujemy kompleksową komunikację wizualną, od oznakowania
+          budynków przez estetyczne tabliczki informacyjne po efektowne
+          oklejanie pojazdów – zawsze z dbałością o design.
+        </p>
+      </div>
+      <div class="overlay"></div>
+    </section>
+    <!-- section with partners -->
+    <section class="partners container">
+      <ul class="partners__list">
+        <li class="partners__item"><img src="img/vox-logo.svg" alt="Partner logo Vox"></li>
+        <li class="partners__item"><img src="img/luxmed-logo.svg" alt="Partner logo Luxmed"></li>
+        <li class="partners__item"><img src="img/logo-browar-fortuna.svg" alt="Partner logo Browar Fortuna"></li>
+        <li class="partners__item"><img src="img/kia-logo.svg" alt="Partner logo Kia"></li>
+        <li class="partners__item"><img src="img/man-logo.svg" alt="Partner logo Man"></li>
+        <li class="partners__item"><img src="img/vision-express-logo.png" alt="Partner logo VisionExpress"></li>
+        <li class="partners__item"><img src="img/toyota-logo.svg" alt="Partner logo Toyota"></li>
+      </ul>
+    </section>
+
+    <!-- section with services -->
+    <section class="services container">
+      <ul class="services__list">
+        <li class="services__item">
+          <div class="services__card">
+            <h3 class="services__title">Oznakowanie<br>budynków</h3>
+            <div class="overlay"></div>
+            <img class="services__image" src="img/oznakowanie-budynkow.png" alt="Oznakowanie budynków">
+          </div>
+        </li>
+        <li class="services__item">
+          <div class="services__card">
+            <h3 class="services__title">Oklejanie<br>pojazdów</h3>
+            <div class="overlay"></div>
+            <img class="services__image" src="img/oklejanie-pojazdow.png" alt="Oklejanie pojazdów">
+          </div>
+        </li>
+        <li class="services__item">
+          <div class="services__card">
+            <h3 class="services__title">Wyposażenie<br>wnętrz</h3>
+            <div class="overlay"></div>
+            <img class="services__image" src="img/wyposazenie-wnetrz.png" alt="Wyposażenie wnętrz">
+          </div>
+        </li>
+        <li class="services__item">
+          <div class="services__card">
+            <h3 class="services__title">Kasetony<br>reklamowe</h3>
+            <div class="overlay"></div>
+            <img class="services__image" src="img/kasetony-reklamowe.png" alt="Kasetony reklamowe">
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="equipment">
+      <div class="container">
+        <h2 class="equipment__title">Park maszynowy o powierzchni ponad 500 m² do Twoich usług</h2>
+
+        <ul class="equipment__list">
+          <li class="equipment__item">
+            <div class="equipment__card">
+              <div class="equipment__image">
+                <img src="/img/equipments.png" alt="Drukarki UV">
+                <div class="overlay"></div>
+              </div>
+              <div class="equipment__content">
+                <h3 class="equipment__card-title">Drukarki UV</h3>
+                <p class="equipment__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </p>
+              </div>
+            </div>
           </li>
-          <li class="header__links-list-item">
-            <a class="header__link" href="#">Produkty</a>
+          <li class="equipment__item">
+            <div class="equipment__card">
+              <div class="equipment__image">
+                <img src="/img/equipments.png" alt="Ploter CNC">
+                <div class="overlay"></div>
+              </div>
+              <div class="equipment__content">
+                <h3 class="equipment__card-title">Ploter CNC</h3>
+                <p class="equipment__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </p>
+              </div>
+            </div>
           </li>
-          <li class="header__links-list-item">
-            <a class="header__link" href="#">Park maszynowy</a>
+          <li class="equipment__item">
+            <div class="equipment__card">
+              <div class="equipment__image">
+                <img src="/img/equipments.png" alt="Frezarki">
+                <div class="overlay"></div>
+              </div>
+              <div class="equipment__content">
+                <h3 class="equipment__card-title">Frezarki</h3>
+                <p class="equipment__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </p>
+              </div>
+            </div>
           </li>
-          <li class="header__links-list-item">
-            <a class="header__link" href="#">Realizacje</a>
-          </li>
-          <li class="header__links-list-item">
-            <a class="header__link" href="#">Kontakt</a>
-          </li>
-          <li class="header__links-list-item">
-            <a class="header__link" href="#">Technologia</a>
+          <li class="equipment__item">
+            <div class="equipment__card">
+              <div class="equipment__image">
+                <img src="/img/equipments.png" alt="Maszyna">
+                <div class="overlay"></div>
+              </div>
+              <div class="equipment__content">
+                <h3 class="equipment__card-title">Maszyna</h3>
+                <p class="equipment__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </p>
+              </div>
+            </div>
           </li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </section>
 
-    <main>
-      <!-- section with photo  -->
-      <section class="cover">
-        <div class="container">
-          <h1 class="cover__title">
-            Zachwyć klientów oznakowaniem, którego nie sposób przeoczyć
-          </h1>
-          <p class="cover__description">
-            Projektujemy kompleksową komunikację wizualną, od oznakowania
-            budynków przez estetyczne tabliczki informacyjne po efektowne
-            oklejanie pojazdów – zawsze z dbałością o design.
-          </p>
-        </div>
-        <div class="overlay"></div>
-      </section>
-      <!-- section with partners -->
-      <section class="partners container">
-        <ul class="partners__list">
-          <li class="partners__item"><img src="img/vox-logo.svg" alt="Partner logo Vox"></li>
-          <li class="partners__item"><img src="img/luxmed-logo.svg" alt="Partner logo Luxmed"></li>
-          <li class="partners__item"><img src="img/logo-browar-fortuna.svg" alt="Partner logo Browar Fortuna"></li>
-          <li class="partners__item"><img src="img/kia-logo.svg" alt="Partner logo Kia"></li>
-          <li class="partners__item"><img src="img/man-logo.svg" alt="Partner logo Man"></li>
-          <li class="partners__item"><img src="img/vision-express-logo.png" alt="Partner logo VisionExpress"></li>
-          <li class="partners__item"><img src="img/toyota-logo.svg" alt="Partner logo Toyota"></li>
-        </ul>
-      </section>
+  </main>
+</body>
 
-        <!-- section with services -->
-      <section class="services container">
-        <ul class="services__list">
-          <li class="services__item">
-            <div class="services__card">
-              <div class="services__header">
-                <h3 class="services__title">Oznakowanie<br>budynków</h3>
-                <img src="img/arrow.svg" alt="arrow" class="services__arrow">
-              </div>
-              <div class="overlay"></div>
-              <img class="services__image" src="img/oznakowanie-budynkow.png" alt="Oznakowanie budynków">
-            </div>
-          </li>
-          <li class="services__item">
-            <div class="services__card">
-              <div class="services__header">
-                <h3 class="services__title">Oklejanie<br>pojazdów</h3>
-                <img src="img/arrow.svg" alt="arrow" class="services__arrow">
-              </div>
-              <div class="overlay"></div>
-              <img class="services__image" src="img/oklejanie-pojazdow.png" alt="Oklejanie pojazdów">
-            </div>
-          </li>
-          <li class="services__item">
-            <div class="services__card">
-              <div class="services__header">
-                <h3 class="services__title">Wyposażenie<br>wnętrz</h3>
-                <img src="img/arrow.svg" alt="arrow" class="services__arrow">
-              </div>
-              <div class="overlay"></div>
-              <img class="services__image" src="img/wyposazenie-wnetrz.png" alt="Wyposażenie wnętrz">
-            </div>
-          </li>
-          <li class="services__item">
-            <div class="services__card">
-              <div class="services__header">
-                <h3 class="services__title">Kasetony<br>reklamowe</h3>
-                <img src="img/arrow.svg" alt="arrow" class="services__arrow">
-              </div>
-              <div class="overlay"></div>
-              <img class="services__image" src="img/kasetony-reklamowe.png" alt="Kasetony reklamowe">
-            </div>
-          </li>
-        </ul>
-      </section>
-
-    </main>
-  </body>
 </html>

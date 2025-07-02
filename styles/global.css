@@ -105,7 +105,7 @@ a {
 /* Поведение ссылок при наведении и фокусе */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  text-decoration: none;
   outline: none;
 }
 

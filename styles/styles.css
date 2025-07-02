@@ -1,13 +1,14 @@
 :root {
   /* fonts */
   --font-primary: "Ubuntu", sans-serif;
-  --font-secondary: "Lora", serif;
+  --font-secondary: "Lora", sans-serif;
 
   /* colors */
   --color-bg: #101010;
   --color-white: #fff;
   --color-brand-normal: #f9fbe7;
   --color-brand-active: #c2d30d;
+  --color-brand-hover: #747f08;
 
   /* line-height */
   --lh-120: 1.2;
@@ -15,14 +16,15 @@
 
 .page {
   font-family: var(--font-primary, sans-serif);
+  font-weight: 700;
   background-color: var(--color-bg, #101010);
 }
 
 .container {
-  max-width: 1710px;
+  max-width: 1720px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 /* HEADER SECTION */
@@ -30,23 +32,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 15px;
+}
+
+.header.container {
+  padding: 16px 20px;
 }
 
 .header__menu {
   color: var(--color-brand-normal);
-  font-size: clamp(1.125rem, 1.6vw, 1.5625rem);
+  font-size: 25px;
   line-height: var(--lh-120);
 }
 
 .header__links-list {
   display: flex;
-  gap: clamp(1.5rem, 5vw, 6.5rem);
+  justify-content: space-between;
+  gap: 103px;
 }
 
 .header__link.header__link_active {
   color: var(--color-brand-active, #c2d30d);
-  text-decoration: none;
+  cursor: default;
+}
+
+.header__link:hover {
+  transition: color 0.3s ease;
+  color: var(--color-brand-hover);
+  cursor: pointer;
+}
+
+.header__link.header__link_active:hover {
+  color: var(--color-brand-active, #c2d30d);
   cursor: default;
 }
 
@@ -73,35 +89,30 @@
   line-height: var(--lh-120);
   color: var(--color-brand-normal);
   padding-top: 155px;
-  margin-bottom: 44px;
+  margin-bottom: 24px;
   max-width: 977px;
 }
 
 .cover__description {
-  font-family: var(--font-secondary);
-  font-weight: 600;
-  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 400;
+  font-size: 25px;
   line-height: var(--lh-120);
   position: relative;
   z-index: 1;
   color: var(--color-white);
-  max-width: 547px;
+  max-width: 863px;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
 }
 
 /* PARTNERS SECTION */
 .partners {
-  margin-top: 64px; 
-  margin-bottom: 119px;
+  margin-top: 79px; 
+  margin-bottom: 105px;
 }
 
 .partners__list {
@@ -118,44 +129,33 @@
 
 /* SERVICES SECTION */
 .services {
-  margin-bottom: 117px;
-  position: relative;
+  margin-bottom: 100px;
 }
 
 .services__list {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-}
-
-.services__item {
-  height: 1150px;
+  height: 927px;
 }
 
 .services__card {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.services__header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-  padding: 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .services__title {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  text-align: center;
   color: var(--color-white);
-  font-size: 39px;
+  font-size: 31px;
   line-height: var(--lh-120);
+  z-index: 2;
 }
 
 .services__image {
@@ -165,10 +165,83 @@
 }
 
 .services__card .overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(180deg, #000 0.02%, rgba(0, 0, 0, 0.00) 49.96%);
   z-index: 1;
+}
+
+
+/* Добавьте этот CSS в ваш styles/styles.css */
+
+/* Независимый декоративный эллипс */
+.decorative-ellipse {
+  position: fixed; /* fixed позволяет позиционировать относительно viewport */
+  width: 357px;
+  height: 357px;
+  background-color: #C2D30D;
+  border-radius: 50%;
+  filter: blur(300px);
+  z-index: -1; /* За всем контентом */
+  pointer-events: none; /* Не мешает взаимодействию */
+  
+  /* Позиционирование в пикселях для стабильности */
+  top: 1000px; 
+  right: -120px;
+}
+
+/* Альтернативные позиции эллипса */
+.decorative-ellipse--center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.decorative-ellipse--right {
+  top: 40vh;
+  right: 15vw;
+  left: auto;
+}
+
+.equipment {
+  background: #151515;
+}
+
+.equipment__title {
+  padding-top: 152px;
+  margin-bottom: 69px;
+  max-width: 977px;
+  line-height: var(--lh-120);
+  font-size: 61px;
+  color: var(--color-brand-normal);
+}
+
+.equipment__list {
+  display: flex;
+  gap: 20px;
+}
+
+.equipment__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 29px;
+}
+
+.equipment__image .overlay {
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+.equipment__card-title {
+  font-size: 39px;
+  color: var(--color-brand-normal);
+  line-height: var(--lh-120);
+  margin-bottom: 9px;
+}
+
+.equipment__description {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 373px;
+  color: var(--color-brand-normal);
+  line-height: var(--lh-120);
+  margin-bottom: 155px;
 }
