@@ -1,5 +1,5 @@
-@media screen and (max-width: 812px) {
-  .header__logo-image {
-    /* display: none; */
+@media screen and (max-width: 1000px) {
+  .header__menu {
+    display: none;
   }
 }

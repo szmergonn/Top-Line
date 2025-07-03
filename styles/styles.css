@@ -17,7 +17,7 @@
 .page {
   font-family: var(--font-primary, sans-serif);
   font-weight: 700;
-  background-color: var(--color-bg, #101010);
+  background-color: var(--color-bg);
 }
 
 .container {
@@ -51,7 +51,7 @@
 }
 
 .header__link.header__link_active {
-  color: var(--color-brand-active, #c2d30d);
+  color: var(--color-brand-active);
   cursor: default;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .header__link.header__link_active:hover {
-  color: var(--color-brand-active, #c2d30d);
+  color: var(--color-brand-active);
   cursor: default;
 }
 
@@ -111,8 +111,8 @@
 
 /* PARTNERS SECTION */
 .partners {
-  margin-top: 79px; 
-  margin-bottom: 105px;
+  margin-top: 81px; 
+  margin-bottom: 102px;
 }
 
 .partners__list {
@@ -136,13 +136,10 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  height: 927px;
 }
 
 .services__card {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .services__title {
@@ -159,8 +156,8 @@
 }
 
 .services__image {
-  width: 100%;
-  height: 100%;
+  width: 405px;
+  height: 927px;
   object-fit: cover;
 }
 
@@ -169,26 +166,19 @@
   z-index: 1;
 }
 
-
-/* Добавьте этот CSS в ваш styles/styles.css */
-
-/* Независимый декоративный эллипс */
 .decorative-ellipse {
-  position: fixed; /* fixed позволяет позиционировать относительно viewport */
+  position: absolute;
   width: 357px;
   height: 357px;
-  background-color: #C2D30D;
+  background-color: var(--color-brand-active);
   border-radius: 50%;
-  filter: blur(300px);
-  z-index: -1; /* За всем контентом */
-  pointer-events: none; /* Не мешает взаимодействию */
-  
-  /* Позиционирование в пикселях для стабильности */
+  filter: blur(150px);
+  z-index: -1;
+  pointer-events: none;
   top: 1000px; 
   right: -120px;
 }
 
-/* Альтернативные позиции эллипса */
 .decorative-ellipse--center {
   top: 50%;
   left: 50%;
@@ -201,13 +191,14 @@
   left: auto;
 }
 
+/* EQUIPMENT SECTION */
 .equipment {
   background: #151515;
 }
 
 .equipment__title {
   padding-top: 152px;
-  margin-bottom: 69px;
+  margin-bottom: 70px;
   max-width: 977px;
   line-height: var(--lh-120);
   font-size: 61px;
@@ -234,7 +225,7 @@
   font-size: 39px;
   color: var(--color-brand-normal);
   line-height: var(--lh-120);
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 .equipment__description {
@@ -246,9 +237,9 @@
   margin-bottom: 155px;
 }
 
+/* PORTFOLIO SECTION */
 .portfolio {
   padding-top: 100px;
-  margin-bottom: 148px;
 }
 
 .portfolio__title {
@@ -262,10 +253,6 @@
 .portfolio__carousel {
   position: relative;
   overflow: hidden;
-}
-
-.portfolio__carousel .container {
-  padding: 0 calc(20px + 40px + 61px); /* базовый padding + ширина стрелки + отступ */
 }
 
 .portfolio__list {
@@ -291,30 +278,134 @@
   transform: scale(1.05);
 }
 
-.portfolio__arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: transparent;
+.portfolio__dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  padding-bottom: 5px;
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+.portfolio__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
   border: none;
-  color: var(--color-brand-normal);
-  color: black;
+  background-color: #e0e0e0;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio__dot:hover {
+  transform: scale(1.2);
+}
+
+.portfolio__dot--active {
+  background-color: #ecf1b4;
+}
+
+.portfolio__dot--active:hover {
+  transform: none;
+  background-color: #ecf1b4;
+  cursor: default;
+}
+
+
+/* CONTACT SECTION */
+.contact {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__ellipse {
+  position: absolute;
+  width: 2647px;
+  height: 1321px;
+  background: #232323;
+  border-radius: 2647px;
+  filter: blur(50px);
+  z-index: 0;
+  pointer-events: none;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-shrink: 0
+}
+
+.contact__content {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__title {
+  text-align: center;
+  font-size: 61px;
+  font-weight: 700;
+  line-height: var(--lh-120);
+  color: var(--color-brand-normal);
+  margin-bottom: 16px;
+  padding-top: 199px;
+}
+
+.contact__description {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: var(--lh-120);
+  color: var(--color-brand-normal);
+  margin-bottom: 42px;
+}
+
+.contact__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  margin-bottom: 96px;
+}
+
+.contact__button {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: var(--lh-120);
+  border-radius: 10px;
+  background: #797d46;
+  padding: 14px 53px;
 }
 
-.portfolio__arrow--prev {
-  left: 61px;
+.contact__button:hover {
+  background-color: #929e0a;
 }
 
-.portfolio__arrow--next {
-  right: 61px;
+/* FOOTER SECTION */
+.contact-footer {
+  display: flex;
+  align-items: center;
+  height: 127px;
+  background-color: var(--color-bg);
+  color: var(--color-brand-normal);
 }
 
-.portfolio__arrow:hover {
-  transform: translateY(-50%) scale(1.1);
+.contact-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-footer__company {
+  font-size: 18px;
+  line-height: var(--lh-120);
+}
+
+.contact-footer__address,.contact-footer__copyright {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.contact-footer__author {
+  text-align: right;
 }
