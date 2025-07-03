@@ -32,10 +32,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header.container {
-  padding: 16px 20px;
+  padding-top: 16px;
+  margin-bottom: 16px;
 }
 
 .header__menu {
@@ -85,7 +83,7 @@
 .cover__title {
   position: relative;
   z-index: 1;
-  font-size: clamp(2.1875rem, 4.5vw, 3.8125rem);
+  font-size: clamp(1.5625rem, 0.2323rem + 5.8632vw, 3.8125rem);
   line-height: var(--lh-120);
   color: var(--color-brand-normal);
   padding-top: 155px;
@@ -118,7 +116,7 @@
 .partners__list {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 .partners__item {

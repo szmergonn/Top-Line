@@ -1,5 +1,133 @@
-@media screen and (max-width: 1000px) {
-  .header__menu {
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1240px;
+  }
+
+  .header {
+    padding-top: 21px;
+    margin-bottom: 23px;
+  }
+
+  .partners {
+    margin-top: 40px;
+    margin-bottom: 102px;
+  }
+
+  .partners__item img {
+    max-width: 71.4%;
+    height: auto;
+  }
+
+  .header__logo-image {
+    width: clamp(53px, 53px + (54 - 53) * ((100vw - 430px) / (1440 - 430)), 54px);
+    height: clamp(35px, 35px + (36 - 35) * ((100vw - 430px) / (1440 - 430)), 36px);
+  }
+
+  .cover {
+    min-height: clamp(262px, 262px + (418 - 262) * ((100vw - 430px) / (1440 - 430)), 418px);
+  }
+
+  .cover__title {
+    padding-top: 79px;
+  }
+
+  .services__image {
+    width: clamp(176px, 176px + (285 - 176) * ((100vw - 430px) / (1440 - 430)), 285px);
+    height: clamp(176px, 176px + (653 - 176) * ((100vw - 430px) / (1440 - 430)), 653px);
+  }
+
+  .services__title {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 31px;
+    line-height: var(--lh-120);
+    z-index: 2;
+  }
+
+  .decorative-ellipse {
+    top: 700px;
+    right: -120px;
+  }
+
+  .services {
+    margin-bottom: 73px;
+  }
+
+  .equipment__title {
+    padding-top: 77px;
+    margin-bottom: 32px;
+  }
+
+  .equipment__image {
+    margin-bottom: 11px;
+  }
+
+  .equipment__card-title {
+    margin-bottom: 17px;
+  }
+
+  .equipment__description {
+    max-width: 265px;
+  }
+
+  .portfolio {
+    padding-top: 11px;
+  }
+
+  .portfolio__dots {
+    margin-top: 37px;
+  }
+
+  .contact__title {
+    padding-top: 12px;
+    margin-bottom: 4px;
+  }
+
+  .contact__buttons {
+    gap: 23px;
+    margin-bottom: 138px;
+  }
+
+  .contact__button {
+    padding: 5px 14px;
+  }
+
+  .contact-footer {
+    height: 97px;
+  }
+
+  .contact__ellipse {
+    width: 1444px;
+    height: 721px;
+    top: 136%;
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    max-width: 370px;
+  }
+
+  .cover__title {
+    text-align: center;
+  }
+
+  .cover__description {
     display: none;
+  }
+
+  .header__logo-image {
+    width: clamp(54px, 54px + (72 - 54) * ((100vw - 1440px) / (1920 - 1440)), 72px);
+    height: clamp(36px, 36px + (48 - 36) * ((100vw - 1440px) / (1920 - 1440)), 48px);
+  }
+
+  .cover {
+    min-height: clamp(418px, 418px + (557 - 418) * ((100vw - 1440px) / (1920 - 1440)), 557px);
   }
 }
