@@ -39,16 +39,8 @@
   }
 
   .services__title {
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 700;
-    text-align: center;
-    color: var(--color-white);
+    margin-top: 38px;
     font-size: clamp(20px, 20px + (31 - 20) * ((100vw - 768px) / (1440 - 768)), 31px);
-    line-height: var(--lh-120);
-    z-index: 2;
   }
 
   .services {
@@ -96,7 +88,6 @@
 
   .contact__title {
     padding-top: 12px;
-    padding-right: 7px;
     margin-bottom: 4px;
     font-size: clamp(1.9375rem, 0.2897rem + 5.7692vw, 3.8125rem);
   }
@@ -164,9 +155,15 @@
   }
 
   .partners {
-    position: absolute;
-    top: 23%;
+    position: relative;
+    margin-top: -63px;
+    margin-bottom: 115px;
     z-index: 100;
+  }
+
+  .partners__item img {
+    max-width: 79%;
+    height: auto;
   }
 
   .services {
@@ -179,8 +176,9 @@
   }
 
   .services__card {
-    width: clamp(176px, 176px + (344 - 176) * ((100vw - 430px) / (768 - 430)), 344px);
-    height: clamp(176px, 176px + (344 - 176) * ((100vw - 430px) / (768 - 430)), 344px);
+    justify-content: flex-end;
+    width: auto;
+    height: auto;
     aspect-ratio: 1 / 1;
   }
 
@@ -199,7 +197,7 @@
 
   .services__title {
     font-size: clamp(13px, 13px + (20 - 13) * ((100vw - 430px) / (768 - 430)), 20px);
-    top: 83%;
+    margin-bottom: 37px;
   }
 
   .services__card .overlay {
@@ -212,7 +210,7 @@
 
   .equipment__title {
     text-align: center;
-    font-size: clamp(1.25rem, -1.7588rem + 12.9412vw, 1.9375rem);
+    font-size: clamp(1.25rem, 0.3754rem + 3.2544vw, 1.9375rem);
     max-width: 457px;
     margin: 0 auto;
     padding-top: 56px;
@@ -230,12 +228,12 @@
   }
 
   .equipment__card-title {
-    font-size: clamp(1.25rem, 8.1737rem + -32.2034vw, 2.4375rem);
+    font-size: clamp(1rem, 0.682rem + 1.1834vw, 1.25rem);
     margin-bottom: 0;
   }
 
   .equipment__description {
-    font-size: clamp(0.875rem, 2.3326rem + -6.7797vw, 1.125rem);
+    font-size: clamp(0.6875rem, 0.449rem + 0.8876vw, 0.875rem);
     max-width: 344px;
   }
 
@@ -243,7 +241,7 @@
     max-width: 370px;
     margin: 0 auto;
     text-align: center;
-    font-size: clamp(1.25rem, -1.7588rem + 12.9412vw, 1.9375rem);
+    font-size: clamp(1.25rem, 0.3754rem + 3.2544vw, 1.9375rem);
     padding-top: 53px;
     margin-bottom: 33px;
   }
@@ -271,12 +269,10 @@
 
   .contact__title {
     padding-top: 15px;
-    padding-right: 19px;
-    font-size: clamp(1.25rem, -1.7588rem + 12.9412vw, 1.9375rem);
+    font-size: clamp(1.5625rem, 1.0854rem + 1.7751vw, 1.9375rem);
   }
 
   .contact__description {
-    padding-right: 10px;
     font-size: clamp(0.6875rem, 0.449rem + 0.8876vw, 0.875rem);
     margin-bottom: 36px;
   }
@@ -295,23 +291,48 @@
 
   .contact-footer__address,
   .contact-footer__copyright {
-     font-size: 0.5rem;
+    font-size: 0.5rem;
+  }
+
+  .contact__icon {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .cover__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .cover__description {
+    display: none;
+  }
+
+  .partners__item img {
+    max-width: 85%;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 430px) {
   .container {
-    max-width: 370px;
+    max-width: 430px;
+  }
+
+  .cover {
+    background-image: url(../img/hero-baner-430.png);
+    height: 262px;
   }
 
   .cover__title {
-    font-size: 25px;
-    max-width: 363px;
-    text-align: center;
+    padding-top: 86px;
+    font-size: clamp(1.25rem, 0.3409rem + 4.5455vw, 1.5625rem);
   }
 
-  .cover__description {
-    display: none;
+  .overlay {
+    background: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   }
 
   .header__logo-image {
@@ -319,25 +340,99 @@
     height: clamp(36px, 36px + (48 - 36) * ((100vw - 1440px) / (1920 - 1440)), 48px);
   }
 
-  .cover {
-    min-height: clamp(418px, 418px + (557 - 418) * ((100vw - 1440px) / (1920 - 1440)), 557px);
+  .partners {
+    margin-top: -46px;
+    margin-bottom: 80px;
+  }
+
+  .services {
+    margin-bottom: 39px;
+    margin-top: -2px;
   }
 
   .services__title {
-    font-size: 13px;
+    font-size: 12px;
+    margin-bottom: 21px;
   }
 
   .services__list {
-    grid-template-columns: repeat(1, 1fr);
+    row-gap: 12px;
   }
 
   .services__card {
-    width: calc((100vw - 40px) / 2);
-    height: calc((100vw - 40px) / 2);
     aspect-ratio: 1 / 1;
   }
 
+  .equipment {
+    padding-bottom: 34px;
+  }
+
+  .equipment__list {
+    row-gap: 28px;
+  }
+
   .equipment__title {
-    text-align: center;
+    padding-top: 34px;
+    margin-bottom: 15px;
+  }
+
+  .equipment__image {
+    margin-bottom: 15px;
+  }
+
+  .equipment__card-title {
+    margin-bottom: 7px;
+  }
+
+  .portfolio__title {
+    max-width: 275px;
+    padding-top: 24px;
+    margin-bottom: 28px;
+  }
+
+  .portfolio__dots {
+    margin-top: 13px;
+    margin-bottom: 66px;
+  }
+
+  .contact__title {
+    padding-top: 18px;
+    margin-bottom: 4px;
+  }
+
+  .contact__description {
+    margin-bottom: 18px;
+    font-size: clamp(0.75rem, 0.9318rem + -0.9091vw, 0.6875rem);
+  }
+
+  .contact__button {
+    padding: 8px 13px;
+  }
+
+  .contact__buttons {
+    margin-bottom: 59px;
+  }
+
+  .contact__icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .contact-footer {
+    height: 76px;
+  }
+
+  .contact__text {
+    font-size: clamp(0.5rem, -0.9545rem + 7.2727vw, 1rem);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .services__title {
+    margin-bottom: 12px;
+  }
+
+  .contact__button {
+    padding: 4px 8px;
   }
 }
