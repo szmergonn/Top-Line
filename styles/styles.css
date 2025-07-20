@@ -43,6 +43,10 @@
   line-height: var(--lh-120);
 }
 
+.header__menu-buttons {
+  display: none;
+}
+
 .header__links-list {
   display: flex;
   justify-content: space-between;
@@ -160,6 +164,70 @@
 }
 .card--signs {
   background-image: url(../img/kasetony-reklamowe.png);
+}
+
+/* BURGER MENU */
+.burger__wrap {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.burger-checkbox {
+  display: none;
+}
+
+.burger {
+  position: relative;
+  width: 25px;
+  height: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger::after,
+.burger::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background: var(--color-brand-normal);
+  transition: all 0.3s ease;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 6px 0 var(--color-brand-normal);
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger-checkbox:checked + .burger::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+  top: 6px;
+}
+
+.burger-checkbox:checked + .burger::after {
+  transform: rotate(-45deg);
+  top: 6px;
+}
+
+.burger-close-text {
+  color: var(--color-brand-normal);
+  font-size: 14px;
+  font-weight: 400;
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .services__title {

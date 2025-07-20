@@ -19,32 +19,41 @@
       <nav class="header__menu">
         <ul class="header__links-list">
           <li class="header__links-list-item">
-            <a class="header__link header__link_active">Home</a>
+            <a class="header__link header__link_active" href="#home">Home</a>
           </li>
           <li class="header__links-list-item">
-            <a class="header__link" href="#">Produkty</a>
+            <a class="header__link" href="#services">Produkty</a>
           </li>
           <li class="header__links-list-item">
-            <a class="header__link" href="#">Park maszynowy</a>
+            <a class="header__link" href="#equipment">Park maszynowy</a>
           </li>
           <li class="header__links-list-item">
-            <a class="header__link" href="#">Realizacje</a>
+            <a class="header__link" href="#portfolio">Realizacje</a>
           </li>
           <li class="header__links-list-item">
-            <a class="header__link" href="#">Kontakt</a>
+            <a class="header__link" href="#contact">Kontakt</a>
           </li>
         </ul>
+        <div class="header__menu-buttons">
+          <a href="tel:+48690250727" class="header__menu-button header__menu-button--call"> Zadzwoń do nas </a>
+          <a href="mailto:info@top-line.pl" class="header__menu-button header__menu-button--email"> Wyślij e-maila </a>
+        </div>
       </nav>
+      <div class="burger__wrap">
+        <input type="checkbox" class="burger-checkbox" id="burger-checkbox" />
+        <label for="burger-checkbox" class="burger"></label>
+        <span class="burger-close-text">Zamknij</span>
+      </div>
     </header>
 
     <main>
       <!-- section with photo  -->
-      <section class="cover">
+      <section class="cover" id="home">
         <div class="container">
           <h1 class="cover__title">Zachwyć klientów oznakowaniem, którego nie sposób przeoczyć</h1>
           <p class="cover__description">
-            Projektujemy kompleksową komunikację wizualną, od oznakowania budynków przez estetyczne tabliczki informacyjne po efektowne oklejanie pojazdów –
-            zawsze z dbałością o design.
+            Projektujemy kompleksową komunikację wizualną, od oznakowania budynków przez estetyczne tabliczki
+            informacyjne po efektowne oklejanie pojazdów – zawsze z dbałością o design.
           </p>
         </div>
         <div class="overlay"></div>
@@ -65,7 +74,7 @@
       </section>
 
       <!-- section with services -->
-      <section class="services container">
+      <section class="services container" id="services">
         <ul class="services__list">
           <li class="services__item">
             <div class="services__card card--building">
@@ -94,7 +103,7 @@
         </ul>
       </section>
       <!-- section with equipment  -->
-      <section class="equipment">
+      <section class="equipment" id="equipment">
         <div class="container">
           <h2 class="equipment__title">Park maszynowy o powierzchni ponad 500 m² do Twoich usług</h2>
 
@@ -108,7 +117,8 @@
                 <div class="equipment__content">
                   <h3 class="equipment__card-title">Drukarki UV</h3>
                   <p class="equipment__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                   </p>
                 </div>
               </div>
@@ -122,7 +132,8 @@
                 <div class="equipment__content">
                   <h3 class="equipment__card-title">Ploter CNC</h3>
                   <p class="equipment__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                   </p>
                 </div>
               </div>
@@ -136,7 +147,8 @@
                 <div class="equipment__content">
                   <h3 class="equipment__card-title">Frezarki</h3>
                   <p class="equipment__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                   </p>
                 </div>
               </div>
@@ -150,7 +162,8 @@
                 <div class="equipment__content">
                   <h3 class="equipment__card-title">Maszyna</h3>
                   <p class="equipment__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                   </p>
                 </div>
               </div>
@@ -159,7 +172,7 @@
         </div>
       </section>
       <!-- section with portfolio  -->
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio" >
         <div class="container">
           <h2 class="portfolio__title">Stworzyliśmy, już tysiące produktów i realizacji</h2>
         </div>
@@ -198,7 +211,7 @@
       </section>
 
       <!-- section with contact  -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <!-- Декоративный эллипс -->
         <div class="contact__ellipse"></div>
 
@@ -238,5 +251,6 @@
         </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
