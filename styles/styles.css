@@ -355,7 +355,7 @@
   gap: 9px;
   padding-bottom: 5px;
   margin-top: 40px;
-  margin-bottom: 90px;
+  margin-bottom: 40px;
 }
 
 .portfolio__dot {
@@ -387,21 +387,21 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  padding-top: 250px;
 }
 
 .contact__ellipse {
   position: absolute;
-  width: 2647px;
-  height: 1321px;
+  width: min(2647px, 150vw);
+  height: min(1321px, 75vw);
   background: #232323;
-  border-radius: 2647px;
+  border-radius: 50%;
   filter: blur(50px);
   z-index: 0;
   pointer-events: none;
-  top: 140%;
+  top: 15vh;
   left: 50%;
-  transform: translate(-50%, -50%);
-  flex-shrink: 0;
+  transform: translateX(-50%);
 }
 
 .contact__content {
@@ -416,7 +416,6 @@
   line-height: var(--lh-120);
   color: var(--color-brand-normal);
   margin-bottom: 16px;
-  padding-top: 199px;
 }
 
 .contact__description {

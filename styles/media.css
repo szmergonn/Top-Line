@@ -84,10 +84,14 @@
 
   .portfolio__dots {
     margin-top: 37px;
+    margin-bottom: 20px;
+  }
+
+  .contact {
+    padding-top: 82px;
   }
 
   .contact__title {
-    padding-top: 12px;
     margin-bottom: 4px;
     font-size: clamp(1.9375rem, 0.2897rem + 5.7692vw, 3.8125rem);
   }
@@ -106,10 +110,9 @@
   }
 
   .contact__ellipse {
-    width: 1444px;
-    height: 721px;
-    top: 136%;
-    left: 50%;
+    width: min(1444px, 130vw);
+    height: min(721px, 65vw);
+    top: 8vh;
   }
 
   .contact__description {
@@ -368,7 +371,7 @@
 
   .portfolio__dots {
     margin-top: 33px;
-    margin-bottom: 199px;
+    margin-bottom: 10px;
   }
 
   .portfolio__dot {
@@ -376,8 +379,11 @@
     height: 10px;
   }
 
+  .contact {
+    padding-top: 206px;
+  }
+
   .contact__title {
-    padding-top: 15px;
     font-size: clamp(1.5625rem, 1.0854rem + 1.7751vw, 1.9375rem);
   }
 
@@ -406,6 +412,12 @@
   .contact__icon {
     width: 17px;
     height: 17px;
+  }
+
+  .contact__ellipse {
+    width: min(800px, 120vw);
+    height: min(400px, 60vw);
+    top: 12vh;
   }
 }
 
@@ -505,11 +517,14 @@
 
   .portfolio__dots {
     margin-top: 13px;
-    margin-bottom: 66px;
+    margin-bottom: 5px;
+  }
+
+  .contact {
+    padding-top: 80px;
   }
 
   .contact__title {
-    padding-top: 18px;
     margin-bottom: 4px;
   }
 
@@ -537,6 +552,12 @@
 
   .contact__text {
     font-size: clamp(0.5rem, -0.9545rem + 7.2727vw, 1rem);
+  }
+
+  .contact__ellipse {
+    width: min(600px, 110vw);
+    height: min(300px, 55vw);
+    top: 10vh;
   }
 }
 
