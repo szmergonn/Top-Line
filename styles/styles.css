@@ -4,7 +4,8 @@
   --font-secondary: "Lora", sans-serif;
 
   /* colors */
-  --color-bg: #101010;
+  --color-bg-primary: #101010;
+  --color-bg-secondary: #151515;
   --color-white: #fff;
   --color-brand-normal: #f9fbe7;
   --color-brand-active: #c2d30d;
@@ -17,7 +18,7 @@
 .page {
   font-family: var(--font-primary, sans-serif);
   font-weight: 700;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-primary);
 }
 
 .container {
@@ -28,7 +29,7 @@
   padding: 0 20px;
 }
 
-/* HEADER SECTION */
+/* header section */
 .header {
   display: flex;
   justify-content: space-between;
@@ -75,98 +76,7 @@
   object-fit: contain;
 }
 
-/* HERO SECTION */
-.cover {
-  position: relative;
-  height: 557px;
-  background-image: url(../img/hero-baner.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.cover__title {
-  position: relative;
-  z-index: 1;
-  font-size: 3.813rem;
-  line-height: var(--lh-120);
-  color: var(--color-brand-normal);
-  padding-top: 155px;
-  margin-bottom: 24px;
-  max-width: 977px;
-}
-
-.cover__description {
-  font-weight: 400;
-  font-size: 1.563rem;
-  line-height: var(--lh-120);
-  position: relative;
-  z-index: 1;
-  color: var(--color-white);
-  max-width: 863px;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-/* PARTNERS SECTION */
-.partners {
-  margin-top: 40px;
-  margin-bottom: 147px;
-}
-
-.partners__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.partners__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* SERVICES SECTION */
-.services {
-  margin-bottom: 100px;
-}
-
-.services__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.services__card {
-  position: relative;
-  width: 100%;
-  height: 927px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.card--building {
-  background-image: url(../img/oznakowanie-budynkow.png);
-}
-.card--vehicles {
-  background-image: url(../img/oklejanie-pojazdow.png);
-}
-.card--interiors {
-  background-image: url(../img/wyposazenie-wnetrz.png);
-}
-.card--signs {
-  background-image: url(../img/kasetony-reklamowe.png);
-}
-
-/* BURGER MENU */
+/* burger menu */
 .burger__wrap {
   display: none;
   align-items: center;
@@ -230,6 +140,97 @@
   height: 100vh;
 }
 
+/* hero section */
+.cover {
+  position: relative;
+  height: 557px;
+  background-image: url(../img/hero-baner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cover__title {
+  position: relative;
+  z-index: 1;
+  font-size: 3.813rem;
+  line-height: var(--lh-120);
+  color: var(--color-brand-normal);
+  padding-top: 155px;
+  margin-bottom: 24px;
+  max-width: 977px;
+}
+
+.cover__description {
+  font-weight: 400;
+  font-size: 1.563rem;
+  line-height: var(--lh-120);
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+  max-width: 863px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* partners section */
+.partners {
+  margin-top: 40px;
+  margin-bottom: 147px;
+}
+
+.partners__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partners__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* services section */
+.services {
+  margin-bottom: 100px;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.services__card {
+  position: relative;
+  width: 100%;
+  height: 927px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card--building {
+  background-image: url(../img/oznakowanie-budynkow.png);
+}
+.card--vehicles {
+  background-image: url(../img/oklejanie-pojazdow.png);
+}
+.card--interiors {
+  background-image: url(../img/wyposazenie-wnetrz.png);
+}
+.card--signs {
+  background-image: url(../img/kasetony-reklamowe.png);
+}
+
 .services__title {
   margin-top: 84px;
   text-align: center;
@@ -260,9 +261,9 @@
   right: -120px;
 }
 
-/* EQUIPMENT SECTION */
+/* equipment section */
 .equipment {
-  background: #151515;
+  background: var(--color-bg-secondary);
   padding-bottom: 155px;
 }
 
@@ -307,7 +308,7 @@
   line-height: var(--lh-120);
 }
 
-/* PORTFOLIO SECTION */
+/* portfolio section */
 .portfolio {
   padding-top: 100px;
 }
@@ -378,11 +379,10 @@
 
 .portfolio__dot--active:hover {
   transform: none;
-  background-color: #ecf1b4;
   cursor: default;
 }
 
-/* CONTACT SECTION */
+/* contact section */
 .contact {
   text-align: center;
   position: relative;
@@ -450,12 +450,12 @@
   background-color: #929e0a;
 }
 
-/* FOOTER SECTION */
+/* footer section */
 .contact-footer {
   display: flex;
   align-items: center;
   height: 127px;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-primary);
   color: var(--color-brand-normal);
 }
 
