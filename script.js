@@ -16,7 +16,7 @@ burgerCheckbox.addEventListener("change", () => {
   }
 });
 
-// Закрытие меню при клике на ссылки
+// close menu by click on link
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
     burgerCheckbox.checked = false;
@@ -26,7 +26,7 @@ menuLinks.forEach((link) => {
   });
 });
 
-// Закрытие меню при клике вне его области
+// close menu by click on free space
 menu.addEventListener("click", (e) => {
   if (e.target === menu) {
     burgerCheckbox.checked = false;
@@ -36,7 +36,7 @@ menu.addEventListener("click", (e) => {
   }
 });
 
-// Закрытие меню при нажатии Escape
+// close menu by click on free escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && burgerCheckbox.checked) {
     burgerCheckbox.checked = false;
@@ -46,9 +46,10 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Плавная прокрутка к якорным ссылкам
+// smooth scroll by links
 document.addEventListener('DOMContentLoaded', () => {
-  // Сброс состояния мобильного меню при загрузке страницы
+  // 
+  // reset the current menu state when the page is launched
   burgerCheckbox.checked = false;
   menu.classList.remove("active");
   header.classList.remove("menu-open");
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   anchorLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
-      const targetId = href.substring(1); // убираем #
+      const targetId = href.substring(1); // deleting "#"
       const targetSection = document.getElementById(targetId);
       
       if (targetSection) {

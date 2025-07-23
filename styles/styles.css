@@ -248,19 +248,6 @@
   pointer-events: none;
 }
 
-.decorative-ellipse {
-  position: absolute;
-  width: 357px;
-  height: 357px;
-  background-color: var(--color-brand-active);
-  border-radius: 50%;
-  filter: blur(150px);
-  z-index: -1;
-  pointer-events: none;
-  top: 1000px;
-  right: -120px;
-}
-
 /* equipment section */
 .equipment {
   background: var(--color-bg-secondary);

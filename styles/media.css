@@ -3,19 +3,10 @@
     max-width: 1240px;
   }
 
+  /* header section max=1440px*/
   .header {
     padding-top: 21px;
     padding-bottom: 23px;
-  }
-
-  .partners {
-    margin-top: 40px;
-    margin-bottom: 102px;
-  }
-
-  .partners__item img {
-    max-width: 71.4%;
-    height: auto;
   }
 
   .header__logo-image {
@@ -23,6 +14,7 @@
     height: clamp(35px, 35px + (36 - 35) * ((100vw - 430px) / (1440 - 430)), 36px);
   }
 
+  /* hero section max=1440px*/
   .cover {
     height: clamp(350px, 350px + (418 - 350) * ((100vw - 768px) / (1440 - 768)), 418px);
   }
@@ -38,6 +30,18 @@
     max-width: clamp(514px, 514px + (863 - 514) * ((100vw - 768px) / (1440 - 768)), 863px);
   }
 
+  /* partners section max=1440px*/
+  .partners {
+    margin-top: 40px;
+    margin-bottom: 102px;
+  }
+
+  .partners__item img {
+    max-width: 71.4%;
+    height: auto;
+  }
+
+  /* services section max=1440px*/
   .services__title {
     margin-top: 38px;
     font-size: clamp(20px, 20px + (31 - 20) * ((100vw - 768px) / (1440 - 768)), 31px);
@@ -51,11 +55,7 @@
     height: 653px;
   }
 
-  .decorative-ellipse {
-    top: 700px;
-    right: -120px;
-  }
-
+  /* equipment section max=1440px*/
   .equipment__title {
     padding-top: 77px;
     margin-bottom: 32px;
@@ -74,6 +74,7 @@
     max-width: 265px;
   }
 
+  /* portfolio section max=1440px*/
   .portfolio {
     padding-top: 11px;
   }
@@ -87,6 +88,7 @@
     margin-bottom: 20px;
   }
 
+  /* contact section max=1440px*/
   .contact {
     padding-top: 82px;
   }
@@ -126,9 +128,10 @@
 }
 
 @media screen and (max-width: 1200px) {
+  /* header section max=1200px*/
   .header {
     position: relative;
-    z-index: 1000;
+    z-index: 3;
   }
 
   .header__menu {
@@ -174,7 +177,7 @@
 
   .header__logo {
     position: relative;
-    z-index: 1002;
+    z-index: 4;
   }
 
   .header__menu.active {
@@ -210,7 +213,7 @@
   .burger__wrap {
     display: flex;
     flex-direction: row-reverse;
-    z-index: 1002;
+    z-index: 4;
   }
 
   .burger-checkbox:checked ~ .burger-close-text {
@@ -238,6 +241,7 @@
     padding: 0 30px;
   }
 
+  /* header section max=768px*/
   .header {
     padding: 12px 30px;
   }
@@ -250,6 +254,7 @@
     padding: 0 30px;
   }
 
+  /* hero section max=768px*/
   .cover {
     height: clamp(262px, 262px + (350 - 262) * ((100vw - 430px) / (768 - 430)), 350px);
     background-image: url(../img/hero-baner-768.png);
@@ -266,11 +271,12 @@
     max-width: 514px;
   }
 
+  /* partners section max=768px*/
   .partners {
     position: relative;
     margin-top: -63px;
     margin-bottom: 115px;
-    z-index: 100;
+    z-index: 2;
   }
 
   .partners__item img {
@@ -278,6 +284,7 @@
     height: auto;
   }
 
+  /* services section max=768px*/
   .services {
     margin-top: 81px;
     margin-bottom: 56px;
@@ -316,6 +323,7 @@
     background: linear-gradient(0deg, #000 0.02%, rgba(0, 0, 0, 0) 49.96%);
   }
 
+  /* equipment section max=768px*/
   .equipment {
     padding-bottom: 75px;
   }
@@ -349,6 +357,7 @@
     max-width: 344px;
   }
 
+  /* portfolio section max=768px*/
   .portfolio__title {
     max-width: 370px;
     margin: 0 auto;
@@ -379,6 +388,7 @@
     height: 10px;
   }
 
+  /* contact section max=768px*/
   .contact {
     padding-top: 206px;
   }
@@ -422,6 +432,7 @@
 }
 
 @media screen and (max-width: 620px) {
+  /* hero section max=620px*/
   .cover__title {
     text-align: center;
     margin: 0 auto;
@@ -431,6 +442,7 @@
     display: none;
   }
 
+  /* partners section max=620px*/
   .partners__item img {
     max-width: 85%;
     height: auto;
@@ -442,6 +454,17 @@
     max-width: 430px;
   }
 
+  /* header section max=430px*/
+  .header__logo-image {
+    width: clamp(54px, 54px + (72 - 54) * ((100vw - 1440px) / (1920 - 1440)), 72px);
+    height: clamp(36px, 36px + (48 - 36) * ((100vw - 1440px) / (1920 - 1440)), 48px);
+  }
+
+  .header__menu-buttons {
+    gap: 10px;
+  }
+
+  /* hero section max=430px*/
   .cover {
     background-image: url(../img/hero-baner-430.png);
     height: 262px;
@@ -456,20 +479,13 @@
     background: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   }
 
-  .header__logo-image {
-    width: clamp(54px, 54px + (72 - 54) * ((100vw - 1440px) / (1920 - 1440)), 72px);
-    height: clamp(36px, 36px + (48 - 36) * ((100vw - 1440px) / (1920 - 1440)), 48px);
-  }
-
-  .header__menu-buttons {
-    gap: 10px;
-  }
-
+  /* partners section max=430px*/
   .partners {
     margin-top: -46px;
     margin-bottom: 80px;
   }
 
+  /* services section max=430px*/
   .services {
     margin-bottom: 39px;
     margin-top: -2px;
@@ -488,6 +504,7 @@
     aspect-ratio: 1 / 1;
   }
 
+  /* equipment section max=430px*/
   .equipment {
     padding-bottom: 34px;
   }
@@ -509,6 +526,7 @@
     margin-bottom: 7px;
   }
 
+  /* portfolio section max=430px*/
   .portfolio__title {
     max-width: 275px;
     padding-top: 24px;
@@ -520,6 +538,7 @@
     margin-bottom: 5px;
   }
 
+  /* contact section max=430px*/
   .contact {
     padding-top: 80px;
   }
@@ -562,10 +581,12 @@
 }
 
 @media screen and (max-width: 320px) {
+  /* services section max=320px*/
   .services__title {
     margin-bottom: 12px;
   }
 
+  /* contact section max=320px*/
   .contact__button {
     padding: 4px 8px;
   }

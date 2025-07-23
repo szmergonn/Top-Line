@@ -1,1 +1,0 @@
-<!-- <div class="decorative-ellipse"></div> -->

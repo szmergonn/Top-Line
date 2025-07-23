@@ -1,5 +1,3 @@
-/* global.css */
-
 /* ==========================================================================
    1. Box sizing
    ========================================================================== */
@@ -8,11 +6,9 @@
 *::after {
   box-sizing: border-box;
 }
-
 /* ==========================================================================
    2. Reset default spacing
    ========================================================================== */
-/* Убираем внешние отступы */
 body,
 h1, h2, h3, h4,
 p,
@@ -26,14 +22,12 @@ dl,
 dd {
   margin: 0;
 }
-
-/* Убираем внутренние отступы и bullets у списков с атрибутом class */
+/* Remove padding and bullets from lists with a class attribute */
 ul[class],
 ol[class] {
   padding: 0;
   list-style: none;
 }
-
 /* ==========================================================================
    3. Base typography & layout
    ========================================================================== */
@@ -43,20 +37,17 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-
-/* Стягиваем шрифты в формах */
+/* Normalize fonts in forms */
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-
-/* Периодичность между элементами в article */
+/* Spacing between elements in article */
 article > * + * {
   margin-top: 1em;
 }
-
 /* ==========================================================================
    4. Images
    ========================================================================== */
@@ -64,7 +55,6 @@ img {
   max-width: 100%;
   display: block;
 }
-
 /* ==========================================================================
    5. Reduced motion
    ========================================================================== */
@@ -76,17 +66,14 @@ img {
     scroll-behavior: auto !important;
   }
 }
-
 /* ==========================================================================
    6. Reset for navigation, lists and links
    ========================================================================== */
-/* Навигация без отступов */
 nav {
   margin: 0;
   padding: 0;
 }
-
-/* Сброс списков внутри nav и глобально для li */
+/* Reset lists inside nav and globally for li */
 nav ul,
 nav li,
 li {
@@ -94,22 +81,19 @@ li {
   margin: 0;
   padding: 0;
 }
-
-/* Базовые стили для всех ссылок */
+/* Base styles for all links */
 a {
-  color: inherit;           /* унаследует цвет родителя */
-  text-decoration: none;    /* убираем подчёркивание */
+  color: inherit;
+  text-decoration: none;
   background-color: transparent;
 }
-
-/* Поведение ссылок при наведении и фокусе */
+/* Link behavior on hover and focus */
 a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
 }
-
-/* Сохраняем текст-эффект у ссылок без класса */
+/* Preserve text effect on links without a class  */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
