@@ -1,0 +1,178 @@
+/* hero section */
+.cover {
+  background-image: url(../img/hero-baner.png);
+}
+
+/* services section */
+.services {
+  margin-bottom: 100px;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.services__card {
+  position: relative;
+  width: 100%;
+  height: 927px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card--building {
+  background-image: url(../img/oznakowanie-budynkow.png);
+}
+.card--vehicles {
+  background-image: url(../img/oklejanie-pojazdow.png);
+}
+.card--interiors {
+  background-image: url(../img/wyposazenie-wnetrz.png);
+}
+.card--signs {
+  background-image: url(../img/kasetony-reklamowe.png);
+}
+
+.services__title {
+  margin-top: 84px;
+  text-align: center;
+  color: var(--color-white);
+  font-size: 1.938rem;
+  line-height: var(--lh-120);
+  z-index: 2;
+}
+
+.services__card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #000 0.02%, rgba(0, 0, 0, 0) 49.96%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* equipment section */
+.equipment {
+  background: var(--color-bg-secondary);
+  padding-bottom: 155px;
+}
+
+.equipment__title {
+  padding-top: 152px;
+  margin-bottom: 70px;
+  max-width: 977px;
+  line-height: var(--lh-120);
+  font-size: 3.813rem;
+  color: var(--color-brand-normal);
+}
+
+.equipment__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.equipment__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 29px;
+}
+
+.equipment__image .overlay {
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.equipment__card-title {
+  font-size: 2.438rem;
+  color: var(--color-brand-normal);
+  line-height: var(--lh-120);
+  margin-bottom: 10px;
+}
+
+.equipment__description {
+  font-size: 1.125rem;
+  font-weight: 400;
+  max-width: 373px;
+  color: var(--color-brand-normal);
+  line-height: var(--lh-120);
+}
+
+/* portfolio section */
+.portfolio {
+  padding-top: 100px;
+}
+
+.portfolio__title {
+  margin-bottom: 50px;
+  font-size: 3.813rem;
+  color: var(--color-brand-normal);
+  line-height: var(--lh-120);
+  max-width: 977px;
+}
+
+.portfolio__carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio__card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio__card:hover .portfolio__image {
+  transform: scale(1.05);
+}
+
+.portfolio__dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  padding-bottom: 5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.portfolio__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio__dot:hover {
+  transform: scale(1.2);
+}
+
+.portfolio__dot--active {
+  background-color: #ecf1b4;
+}
+
+.portfolio__dot--active:hover {
+  transform: none;
+  cursor: default;
+}

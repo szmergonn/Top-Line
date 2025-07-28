@@ -1,0 +1,47 @@
+/* header */
+.header__back-link {
+  color: var(--color-brand-normal);
+  font-size: 1.563rem;
+  font-weight: 700;
+  line-height: var(--lh-120);
+}
+
+/* hero section */
+.cover {
+  background-image: url(../img/hero-baner__szamoluty.png);
+}
+
+.cover__description {
+  max-width: 969px;
+}
+
+/* services section */
+.services__item {
+  display: flex;
+  gap: 162px;
+  align-items: center;
+  margin-bottom: 84px;
+}
+
+.services__image {
+  max-width: 688px;
+  max-height: 419px;
+  flex-shrink: 0;
+}
+
+.services__info {
+  color: var(--color-brand-normal);
+  line-height: var(--lh-120);
+  flex: 1;
+}
+
+.services__title {
+  font-size: 3.063rem;
+  margin-bottom: 17px;
+}
+
+.services__description {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: var(--lh-120);
+}
