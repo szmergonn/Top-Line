@@ -112,9 +112,9 @@
   }
 
   .contact__ellipse {
-    width: min(1444px, 130vw);
-    height: min(721px, 65vw);
-    top: 8vh;
+    width: 1444px;
+    height: 721px;
+    top: 4vh;
   }
 
   .contact__description {
@@ -425,9 +425,9 @@
   }
 
   .contact__ellipse {
-    width: min(800px, 120vw);
-    height: min(400px, 60vw);
-    top: 12vh;
+    width: 1537px;
+    height: 863px;
+    top: 8vh;
   }
 }
 
@@ -574,9 +574,9 @@
   }
 
   .contact__ellipse {
-    width: min(600px, 110vw);
-    height: min(300px, 55vw);
-    top: 10vh;
+    width: 843px;
+    height: 473px;
+    top: 7vh;
   }
 }
 

@@ -204,14 +204,14 @@
 
 .contact__ellipse {
   position: absolute;
-  width: min(2647px, 150vw);
-  height: min(1321px, 75vw);
+  width: 2647px;
+  height: 1321px;
   background: #232323;
   border-radius: 50%;
   filter: blur(50px);
   z-index: 0;
   pointer-events: none;
-  top: 15vh;
+  top: 5vh;
   left: 50%;
   transform: translateX(-50%);
 }
