@@ -83,11 +83,6 @@
     font-size: clamp(1.9375rem, 0.2897rem + 5.7692vw, 3.8125rem);
   }
 
-  .portfolio__dots {
-    margin-top: 37px;
-    margin-bottom: 20px;
-  }
-
   /* contact section max=1440px*/
   .contact {
     padding-top: 82px;
@@ -367,23 +362,8 @@
     margin-bottom: 33px;
   }
 
-  .portfolio__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    transition: transform 0.3s ease;
-  }
-
-  .portfolio__item:not(:nth-child(1)):not(:nth-child(2)) {
-    display: none;
-  }
-
-  .portfolio__dots {
-    margin-top: 33px;
-    margin-bottom: 10px;
-  }
-
-  .portfolio__dot {
+  #portfolio .splide__pagination__page,
+  #portfolio .splide__pagination__page.is-active {
     width: 10px;
     height: 10px;
   }
@@ -533,11 +513,6 @@
     margin-bottom: 28px;
   }
 
-  .portfolio__dots {
-    margin-top: 13px;
-    margin-bottom: 5px;
-  }
-
   /* contact section max=430px*/
   .contact {
     padding-top: 80px;
@@ -584,6 +559,13 @@
   /* services section max=320px*/
   .services__title {
     margin-bottom: 12px;
+  }
+
+  /* portfolio section max=320px*/
+  #portfolio .splide__pagination__page,
+  #portfolio .splide__pagination__page.is-active {
+    width: 10px;
+    height: 10px;
   }
 
   /* contact section max=320px*/

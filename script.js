@@ -47,29 +47,40 @@ document.addEventListener("keydown", (e) => {
 });
 
 // smooth scroll by links
-document.addEventListener('DOMContentLoaded', () => {
-  // 
+document.addEventListener("DOMContentLoaded", () => {
+  //
   // reset the current menu state when the page is launched
   burgerCheckbox.checked = false;
   menu.classList.remove("active");
   header.classList.remove("menu-open");
   body.classList.remove("no-scroll");
-  
+
   const anchorLinks = document.querySelectorAll('.header__link[href^="#"]');
-  
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
+
+  anchorLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
       const targetId = href.substring(1); // deleting "#"
       const targetSection = document.getElementById(targetId);
-      
+
       if (targetSection) {
         e.preventDefault();
         targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+          behavior: "smooth",
+          block: "start",
         });
       }
     });
   });
+  new Splide("#portfolio", {
+    arrows: false,
+    pagination: true,
+    perPage: 4,
+    gap: "20px",
+    breakpoints: {
+      768: {
+        perPage: 2,
+      },
+    },
+  }).mount();
 });

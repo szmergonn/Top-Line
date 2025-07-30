@@ -6,6 +6,7 @@
     <meta name="description" content="here you should text a short description of website for SEO" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <link rel="stylesheet" href="styles/components.css" />
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/media.css" />
@@ -174,40 +175,32 @@
         </div>
       </section>
 
-      <!-- section portfolio  -->
-      <section class="portfolio" id="portfolio">
+      <section class="splide portfolio" id="portfolio" aria-labelledby="carousel-portfolio">
         <div class="container">
-          <h2 class="portfolio__title">Stworzyliśmy, już tysiące produktów i realizacji</h2>
-        </div>
-        <div class="portfolio__carousel">
-          <div class="container">
-            <ul class="portfolio__list">
-              <li class="portfolio__item">
+          <h2 class="portfolio__title" id="carousel-portfolio">Stworzyliśmy, już tysiące produktów i realizacji</h2>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide portfolio__item">
                 <figure class="portfolio__card">
                   <img class="portfolio__image" src="img/portfolio1.jpg" alt="Realizacja 1" />
                 </figure>
               </li>
-              <li class="portfolio__item">
+              <li class="splide__slide portfolio__item">
                 <figure class="portfolio__card">
                   <img class="portfolio__image" src="img/portfolio2.jpg" alt="Realizacja 2" />
                 </figure>
               </li>
-              <li class="portfolio__item">
+              <li class="splide__slide portfolio__item">
                 <figure class="portfolio__card">
                   <img class="portfolio__image" src="img/portfolio3.jpg" alt="Realizacja 3" />
                 </figure>
               </li>
-              <li class="portfolio__item">
+              <li class="splide__slide portfolio__item">
                 <figure class="portfolio__card">
                   <img class="portfolio__image" src="img/portfolio4.jpg" alt="Realizacja 4" />
                 </figure>
               </li>
             </ul>
-          </div>
-          <div class="portfolio__dots">
-            <button class="portfolio__dot portfolio__dot--active" data-slide="0" aria-label="Slajd 1"></button>
-            <button class="portfolio__dot" data-slide="1" aria-label="Slajd 2"></button>
-            <button class="portfolio__dot" data-slide="2" aria-label="Slajd 3"></button>
           </div>
         </div>
       </section>
@@ -249,6 +242,7 @@
         </div>
       </div>
     </footer>
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
     <script src="./script.js"></script>
   </body>
 </html>

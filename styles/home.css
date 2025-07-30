@@ -116,16 +116,8 @@
   max-width: 977px;
 }
 
-.portfolio__carousel {
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  transition: transform 0.3s ease;
+.splide__track {
+  padding-bottom: 35px;
 }
 
 .portfolio__card {
@@ -145,34 +137,21 @@
   transform: scale(1.05);
 }
 
-.portfolio__dots {
-  display: flex;
-  justify-content: center;
-  gap: 9px;
-  padding-bottom: 5px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+#portfolio .splide__pagination {
+  position: relative;
+  margin-top: -7px;
 }
 
-.portfolio__dot {
+#portfolio .splide__pagination__page {
   width: 18px;
   height: 18px;
-  border-radius: 50%;
-  border: none;
   background-color: #e0e0e0;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  margin: 0 9px 0 0;
 }
 
-.portfolio__dot:hover {
+#portfolio .splide__pagination__page.is-active {
+  width: 18px;
+  height: 18px;
   transform: scale(1.2);
-}
-
-.portfolio__dot--active {
   background-color: #ecf1b4;
-}
-
-.portfolio__dot--active:hover {
-  transform: none;
-  cursor: default;
 }
