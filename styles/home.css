@@ -1,6 +1,6 @@
 /* hero section */
 .cover {
-  background-image: url(../img/hero-baner.png);
+  background-image: url(../img/hero-baner.webp);
 }
 
 /* services section */
@@ -27,16 +27,16 @@
 }
 
 .card--building {
-  background-image: url(../img/oznakowanie-budynkow.png);
+  background-image: url(../img/oznakowanie-budynkow.webp);
 }
 .card--vehicles {
-  background-image: url(../img/oklejanie-pojazdow.png);
+  background-image: url(../img/oklejanie-pojazdow.webp);
 }
 .card--interiors {
-  background-image: url(../img/wyposazenie-wnetrz.png);
+  background-image: url(../img/wyposazenie-wnetrz.webp);
 }
 .card--signs {
-  background-image: url(../img/kasetony-reklamowe.png);
+  background-image: url(../img/kasetony-reklamowe.webp);
 }
 
 .services__title {

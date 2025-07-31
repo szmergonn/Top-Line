@@ -252,7 +252,7 @@
   /* hero section max=768px*/
   .cover {
     height: clamp(262px, 262px + (350 - 262) * ((100vw - 430px) / (768 - 430)), 350px);
-    background-image: url(../img/hero-baner-768.png);
+    background-image: url(../img/hero-baner-768.webp);
   }
 
   .cover__title {
@@ -297,16 +297,16 @@
   }
 
   .card--building {
-    background-image: url(../img/oznakowanie-budynkow-768.png);
+    background-image: url(../img/oznakowanie-budynkow-768.webp);
   }
   .card--vehicles {
-    background-image: url(../img/oklejanie-pojazdow-768.png);
+    background-image: url(../img/oklejanie-pojazdow-768.webp);
   }
   .card--interiors {
-    background-image: url(../img/wyposazenie-wnetrz-768.png);
+    background-image: url(../img/wyposazenie-wnetrz-768.webp);
   }
   .card--signs {
-    background-image: url(../img/kasetony-reklamowe-768.png);
+    background-image: url(../img/kasetony-reklamowe-768.webp);
   }
 
   .services__title {
@@ -446,7 +446,7 @@
 
   /* hero section max=430px*/
   .cover {
-    background-image: url(../img/hero-baner-430.png);
+    background-image: url(../img/hero-baner-430.webp);
     height: 262px;
   }
 
