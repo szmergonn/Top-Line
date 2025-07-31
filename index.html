@@ -50,13 +50,20 @@
 
     <main>
       <!-- section hero  -->
-      <section class="cover" id="home">
-        <div class="container">
-          <h1 class="cover__title">Zachwyć klientów oznakowaniem, którego nie sposób przeoczyć</h1>
-          <p class="cover__description">
-            Projektujemy kompleksową komunikację wizualną, od oznakowania budynków przez estetyczne tabliczki
-            informacyjne po efektowne oklejanie pojazdów – zawsze z dbałością o design.
-          </p>
+      <section class="hero" id="home">
+        <picture class="hero__background">
+          <source media="(max-width: 430px)" srcset="img/hero-baner-430.webp" />
+          <source media="(max-width: 768px)" srcset="img/hero-baner-768.webp" />
+          <img class="hero__image" src="img/hero-baner-1920.webp" alt="Hero banner">
+        </picture>
+        <div class="hero__content">
+          <div class="container">
+            <h1 class="hero__title">Zachwyć klientów oznakowaniem, którego nie sposób przeoczyć</h1>
+            <p class="hero__description">
+              Projektujemy kompleksową komunikację wizualną, od oznakowania budynków przez estetyczne tabliczki
+              informacyjne po efektowne oklejanie pojazdów – zawsze z dbałością o design.
+            </p>
+          </div>  
         </div>
         <div class="overlay"></div>
       </section>

@@ -15,17 +15,16 @@
   }
 
   /* hero section max=1440px*/
-  .cover {
+  .hero {
     height: clamp(350px, 350px + (418 - 350) * ((100vw - 768px) / (1440 - 768)), 418px);
   }
 
-  .cover__title {
+  .hero__title {
     font-size: clamp(31px, 31px + (61 - 31) * ((100vw - 768px) / (1440 - 768)), 61px);
     max-width: clamp(500px, 500px + (977 - 500) * ((100vw - 768px) / (1440 - 768)), 977px);
-    padding-top: 79px;
   }
 
-  .cover__description {
+  .hero__description {
     font-size: clamp(14px, 14px + (25 - 14) * ((100vw - 768px) / (1440 - 768)), 25px);
     max-width: clamp(514px, 514px + (863 - 514) * ((100vw - 768px) / (1440 - 768)), 863px);
   }
@@ -250,18 +249,17 @@
   }
 
   /* hero section max=768px*/
-  .cover {
+  .hero {
     height: clamp(262px, 262px + (350 - 262) * ((100vw - 430px) / (768 - 430)), 350px);
-    background-image: url(../img/hero-baner-768.webp);
   }
 
-  .cover__title {
+  .hero__title {
     font-size: clamp(25px, 25px + (31 - 25) * ((100vw - 430px) / (768 - 430)), 31px);
     max-width: clamp(363px, 363px + (500 - 363) * ((100vw - 430px) / (768 - 430)), 500px);
     margin-bottom: 7px;
   }
 
-  .cover__description {
+  .hero__description {
     font-size: 14px;
     max-width: 514px;
   }
@@ -413,12 +411,12 @@
 
 @media screen and (max-width: 620px) {
   /* hero section max=620px*/
-  .cover__title {
+  .hero__title {
     text-align: center;
     margin: 0 auto;
   }
 
-  .cover__description {
+  .hero__description {
     display: none;
   }
 
@@ -445,13 +443,11 @@
   }
 
   /* hero section max=430px*/
-  .cover {
-    background-image: url(../img/hero-baner-430.webp);
+  .hero {
     height: 262px;
   }
 
-  .cover__title {
-    padding-top: 86px;
+  .hero__title {
     font-size: clamp(1.25rem, 0.3409rem + 4.5455vw, 1.5625rem);
   }
 
