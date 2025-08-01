@@ -54,7 +54,7 @@
 /* equipment section */
 .equipment {
   background: var(--color-bg-secondary);
-  padding-bottom: 155px;
+  padding-bottom: 150px;
 }
 
 .equipment__title {
@@ -69,7 +69,8 @@
 .equipment__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  row-gap: 25px;
+  column-gap: 20px;
 }
 
 .equipment__image {

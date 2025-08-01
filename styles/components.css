@@ -293,6 +293,7 @@
 }
 
 .contact-footer__company {
+  font-style: normal;
   font-size: 1.125rem;
   line-height: var(--lh-120);
 }

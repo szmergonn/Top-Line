@@ -27,13 +27,21 @@
 
     <main>
       <!-- section hero  -->
-      <section class="cover" id="home">
-        <div class="container">
-          <h1 class="cover__title">Szamotuły - frezowanie, CNC, oklejanie pojazdów, druk UV</h1>
-          <p class="cover__description">
-            Istniejemy na rynku od ponad 10 lat, zajmujemy się profesjonalnymi usługami CNC, drukiem UV, oklejaniem
-            pojazdów oraz pozostałymi usługami na zamówienie, wykonywanymi w naszym parku maszynowym na terenie Szmotuł.
-          </p>
+      <section class="hero" id="home">
+        <picture class="hero__background">
+          <source media="(max-width: 430px)" srcset="img/hero-baner-430.webp" />
+          <source media="(max-width: 768px)" srcset="img/hero-baner-768.webp" />
+          <img class="hero__image" src="img/hero-baner-1920.webp" alt="Hero banner" />
+        </picture>
+        <div class="hero__content">
+          <div class="container">
+            <h1 class="hero__title">Szamotuły - frezowanie, CNC, oklejanie pojazdów, druk UV</h1>
+            <p class="hero__description">
+              Istniejemy na rynku od ponad 10 lat, zajmujemy się profesjonalnymi usługami CNC, drukiem UV, oklejaniem
+              pojazdów oraz pozostałymi usługami na zamówienie, wykonywanymi w naszym parku maszynowym na terenie
+              Szmotuł.
+            </p>
+          </div>
         </div>
         <div class="overlay"></div>
       </section>
