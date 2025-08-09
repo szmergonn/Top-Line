@@ -7,11 +7,7 @@
 }
 
 /* hero section */
-.cover {
-  background-image: url(../img/hero-baner__szamoluty.png);
-}
-
-.cover__description {
+.hero__description {
   max-width: 969px;
 }
 
@@ -44,4 +40,73 @@
   font-size: 1.125rem;
   font-weight: 400;
   line-height: var(--lh-120);
+}
+
+/* advanatges section */
+.advantages {
+  margin-bottom: 80px;
+}
+
+.advantages .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.advantages__text {
+  font-weight: 400;
+  color: #f9fbe7;
+  line-height: var(--lh-120);
+}
+.advantages__title {
+  max-width: 865px;
+  font-size: 2.438rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.advantages__paragraph {
+  font-size: 1.125rem;
+  max-width: 830px;
+  margin-bottom: 15px;
+}
+
+.advantages__accent {
+  font-weight: 700;
+}
+
+.advantages__img {
+  width: 100%;
+  max-width: 688px;
+}
+
+/* cooperation section */
+.cooperation {
+  background-color: #151515;
+  padding: 57px 0;
+}
+
+.cooperation .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cooperation__list {
+  display: flex;
+  align-items: center;
+  gap: 147px;
+}
+
+.cooperation__item {
+  width: 96px;
+  height: 120px;
+}
+
+.cooperation__paragraph {
+  color: #e0e0e0;
+  font-size: 1.938rem;
+  font-weight: 400;
+  line-height: var(--lh-120);
+  max-width: 688px;
 }
