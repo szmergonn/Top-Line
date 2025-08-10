@@ -160,7 +160,52 @@
 }
 
 .production .overlay {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.9)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.9));
+}
+
+/* benefits section */
+.benefits {
+  background-color: #151515;
+  padding-top: 93px;
+  padding-bottom: 144px;
+}
+
+.benefits__title {
+  color: #f9fbe7;
+  max-width: 606px;
+  font-size: 2.438rem;
+  line-height: var(--lh-120);
+  margin-bottom: 40px;
+}
+
+.benefits__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.benefits__item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.benefits__icon {
+  width: 98px;
+  height: 120px;
+}
+
+.benefits__content {
+  color: #f9fbe7;
+  line-height: var(--lh-120);
+}
+
+.benefits__item-title {
+  font-size: 1.563rem;
+  margin-bottom: 7px;
+}
+
+.benefits__item-text {
+  font-size: 1.125rem;
+  font-weight: 400;
 }
