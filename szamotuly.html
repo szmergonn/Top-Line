@@ -209,14 +209,66 @@
 
       <section class="map">
         <iframe
+          title="Mapa — Długa 17A, Szamotuły"
           loading="lazy"
           allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerpolicy="strict-origin-when-cross-origin"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAVrp1DEU0talzOJ1SmaMiNVDrPZGE4KoU&q=D%C5%82uga+17A+64-500+Szamotu%C5%82y+Poland&zoom=17"
         >
         </iframe>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-brand">
+          <img class="footer__logo" src="img/logo.svg" alt=""/>
+
+          <div class="footer__contact">
+            <address class="footer__address">
+              <p><strong>TopLine Szamotuły</strong></p>
+              <p>ul. Długa 17A</p>
+              <p>64-500 Szamotuły</p>
+              <p><a href="tel:+48511197303">tel: +48&nbsp;511&nbsp;197&nbsp;303</a></p>
+              <p><a href="mailto:info@top-line.pl">e-mail: info@top-line.pl</a></p>
+            </address>
+            <p class="footer__hours">Firma czynna w tygodniu od 8 do 16. Kontakt telefoniczny od 8 do 20.</p>
+          </div>
+        </div>
+
+        <form class="footer-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email" class="visually-hidden">Adres e-mail</label>
+              <input type="email" id="email" name="email" placeholder="Twój adres e-mail" inputmode="email" />
+              <span class="field-error" id="emailError" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="phone" class="visually-hidden">Numer telefonu</label>
+              <input type="tel" id="phone" name="phone" placeholder="Twój numer telefonu" inputmode="tel" />
+              <span class="field-error" id="phoneError" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message" class="visually-hidden">Wiadomość</label>
+            <textarea
+              id="message"
+              name="message"
+              minlength="10"
+              required
+              placeholder="Opisz swoje zapytanie / bądź i Twoją prośbę o kontakt. Im bardziej szczegółowych informacji udzielisz, tym lepiej będziemy Ci w stanie doradzić/dokładniej wycenić Twój projekt."
+            ></textarea>
+            <span class="field-error" id="messageError" aria-live="polite"></span>
+          </div>
+
+          <button class="form-submit" type="submit">Wyślij wiadomość akceptując politykę prywatności</button>
+
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
