@@ -63,7 +63,7 @@
   max-width: 865px;
   font-size: 2.438rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .advantages__paragraph {
@@ -91,7 +91,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  column-gap: clamp(24px, 5vw, 80px);
+  column-gap: clamp(12px, 3vw, 80px);
 }
 
 .cooperation__list {
@@ -100,12 +100,6 @@
   align-items: center;
   justify-items: start;
   gap: clamp(16px, 4vw, 56px);
-}
-
-.cooperation__item { 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
 }
 
 .cooperation__icon {
@@ -143,6 +137,18 @@
 
 .production__item {
   position: relative;
+}
+
+.production__item:hover {
+  cursor: pointer;
+}
+
+.production__item:hover .overlay {
+  background: linear-gradient(rgba(194, 211, 13, 0.9));
+}
+
+.production__item:hover .production__item-title {
+  color: #101010;
 }
 
 .production__image {
@@ -287,7 +293,6 @@
 }
 
 .footer-form textarea {
-  max-width: 830px;
   min-height: 195px;
   margin-bottom: 17px;
 }
@@ -307,7 +312,7 @@
   background-color: #c2d30d;
   color: #101010;
   padding: 10px 0;
-  font-size: clamp(20px, calc(20px + (25 - 20) * ((100vw - 1440px) / (1920 - 1440))), 25px);
+  font-size: clamp(1.25rem, 0.3125rem + 1.0417vw, 1.5625rem);
   border-radius: 10px;
   cursor: pointer;
   border: none;
