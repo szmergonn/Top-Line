@@ -18,19 +18,12 @@
         <img class="header__logo-image" src="img/logo.svg" alt="Page Logo" />
       </a>
       <a class="header__back-link" href="index.html">Przejdź na stronę firmową</a>
-      <div class="burger__wrap">
-        <input type="checkbox" class="burger-checkbox" id="burger-checkbox" />
-        <label for="burger-checkbox" class="burger"></label>
-        <span class="burger-close-text">Zamknij</span>
-      </div>
     </header>
 
     <main>
       <!-- section hero  -->
       <section class="hero" id="home">
         <picture class="hero__background">
-          <source media="(max-width: 430px)" srcset="img/hero-baner-430.webp" />
-          <source media="(max-width: 768px)" srcset="img/hero-baner-768.webp" />
           <img class="hero__image" src="img/hero-baner__szamoluty-1920.webp" alt="Hero banner" />
         </picture>
         <div class="hero__content">
@@ -222,7 +215,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-brand">
-          <img class="footer__logo" src="img/logo.svg" alt=""/>
+          <img class="footer__logo" src="img/logo.svg" alt="" />
 
           <div class="footer__contact">
             <address class="footer__address">
@@ -236,18 +229,23 @@
           </div>
         </div>
 
-        <form class="footer-form" id="contactForm" novalidate>
+        <form class="footer-form" id="contactForm">
           <div class="form-row">
             <div class="form-field">
               <label for="email" class="visually-hidden">Adres e-mail</label>
               <input type="email" id="email" name="email" placeholder="Twój adres e-mail" inputmode="email" />
-              <span class="field-error" id="emailError" aria-live="polite"></span>
             </div>
 
             <div class="form-field">
               <label for="phone" class="visually-hidden">Numer telefonu</label>
-              <input type="tel" id="phone" name="phone" placeholder="Twój numer telefonu" inputmode="tel" />
-              <span class="field-error" id="phoneError" aria-live="polite"></span>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="\+[0-9]{6,15}"
+                placeholder="Twój numer telefonu"
+                inputmode="tel"
+              />
             </div>
           </div>
 
@@ -260,7 +258,6 @@
               required
               placeholder="Opisz swoje zapytanie / bądź i Twoją prośbę o kontakt. Im bardziej szczegółowych informacji udzielisz, tym lepiej będziemy Ci w stanie doradzić/dokładniej wycenić Twój projekt."
             ></textarea>
-            <span class="field-error" id="messageError" aria-live="polite"></span>
           </div>
 
           <button class="form-submit" type="submit">Wyślij wiadomość akceptując politykę prywatności</button>

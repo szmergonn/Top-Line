@@ -569,3 +569,81 @@
     padding: 4px 8px;
   }
 }
+
+/* =========================
+   Szamotuły page responsive
+   ========================= */
+
+/* max-width: 1440px */
+@media screen and (max-width: 1440px) {
+  .header__back-link {
+    font-size: clamp(1.125rem, 0.625rem + 1.0417vw, 1.5625rem);
+  }
+
+  .footer-brand {
+    gap: clamp(45px, calc(45px + (91 - 45) * ((100vw - 1440px) / (1920 - 1440))), 91px);
+  }
+
+  .footer__logo {
+    width: clamp(175px, calc(175px + (249 - 175) * ((100vw - 1440px) / (1920 - 1440))), 249px);
+  }
+
+  .advantages__title {
+    font-size: clamp(20px, calc(20px + (39 - 20) * ((100vw - 768px) / (1440 - 768))), 39px);
+  }
+
+  .advantages__paragraph {
+    font-size: clamp(0.9375rem, 0.7232rem + 0.4464vw, 1.125rem);
+  }
+
+  .production__title {
+    font-size: clamp(20px, calc(20px + (39 - 20) * ((100vw - 768px) / (1440 - 768))), 39px);
+  }
+
+  .production__item-title {
+    font-size: clamp(1.25rem, 0.4643rem + 1.6369vw, 1.9375rem);
+  }
+
+  .benefits__title {
+    font-size: clamp(20px, calc(20px + (39 - 20) * ((100vw - 768px) / (1440 - 768))), 39px);
+  }
+
+  .advantages__text p:last-child {
+    margin-bottom: 25px;
+  }
+
+  .footer__logo {
+    width: clamp(111px, calc(111px + (175 - 111) * ((100vw - 768px) / (1440 - 768))), 175px);
+  }
+
+  .footer__contact {
+    font-size: clamp(1.125rem, 0.625rem + 1.0417vw, 1.5625rem);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .advantages .container {
+    display: block;
+  }
+
+  .advantages__title {
+    max-width: 600px;
+  }
+
+  .advantages__paragraph {
+    max-width: none;
+  }
+
+  .advantages__img {
+    max-width: none;
+    height: clamp(280px, 40vw, 480px);
+    object-fit: cover;
+    object-position: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .advantages .container {
+    display: block;
+  }
+}
