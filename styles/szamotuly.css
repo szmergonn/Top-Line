@@ -55,7 +55,7 @@
 
 .advantages__text {
   font-weight: 400;
-  color: #f9fbe7;
+  color: var(--color-brand-normal);
   line-height: var(--lh-120);
 }
 
@@ -83,7 +83,7 @@
 
 /* cooperation section */
 .cooperation {
-  background-color: #151515;
+  background-color: var(--color-bg-secondary);
   padding: 57px 0;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .production__title {
-  color: #f9fbe7;
+  color: var(--color-brand-normal);
   max-width: 865px;
   font-size: 2.438rem;
   line-height: var(--lh-120);
@@ -148,7 +148,7 @@
 }
 
 .production__item:hover .production__item-title {
-  color: #101010;
+  color: var(--color-bg-primary);
 }
 
 .production__image {
@@ -171,7 +171,7 @@
 
 .production__item-title {
   max-width: 313px;
-  color: #f9fbe7;
+  color: var(--color-brand-normal);
   font-size: 1.938rem;
   line-height: var(--lh-120);
 }
@@ -180,15 +180,62 @@
   background: linear-gradient(rgba(0, 0, 0, 0.9));
 }
 
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal__content {
+  display: grid;
+  column-gap: 10vw;
+  grid-template-columns: 40% 1fr;
+  background-color: var(--color-bg-secondary);
+}
+
+.modal__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-brand-normal);
+  line-height: var(--lh-120);
+}
+
+.modal__title {
+  font-size: 2.438rem;
+  margin-bottom: 16px;
+}
+
+.modal__paragraph {
+  font-size: 1.125rem;
+  font-weight: 400;
+  max-width: 545px;
+  margin-bottom: 16px;
+}
+
+.modal__text span {
+  font-weight: 400;
+}
+
+.modal__list {
+  font-weight: 400;
+}
+
+.modal__item {
+  list-style-type: disc;
+  margin-left: 25px;
+}
+
 /* benefits section */
 .benefits {
-  background-color: #151515;
+  background-color: var(--color-bg-secondary);
   padding-top: 93px;
   padding-bottom: 144px;
 }
 
 .benefits__title {
-  color: #f9fbe7;
+  color: var(--color-brand-normal);
   max-width: 606px;
   font-size: 2.438rem;
   line-height: var(--lh-120);
@@ -213,7 +260,7 @@
 }
 
 .benefits__content {
-  color: #f9fbe7;
+  color: var(--color-brand-normal);
   line-height: var(--lh-120);
 }
 
@@ -258,7 +305,7 @@
 }
 
 .footer__contact {
-  color: #f9fbe7;
+  color: var(--color-brand-normal);
   font-weight: 400;
   line-height: var(--lh-120);
   font-size: 1.563rem;
@@ -285,11 +332,17 @@
 .footer-form input,
 .footer-form textarea {
   width: 100%;
-  border: 1px solid #f9fbe7;
+  border: 1px solid var(--color-brand-normal);
   border-radius: 10px;
   background-color: inherit;
   color: #bebebe;
   padding: 10px 31px 10px 26px;
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+  color: #bebebe;
+  font-weight: 400;
 }
 
 .footer-form textarea {
@@ -309,8 +362,8 @@
 
 .form-submit {
   width: 100%;
-  background-color: #c2d30d;
-  color: #101010;
+  background-color: var(--color-brand-active);
+  color: var(--color-bg-primary);
   padding: 10px 0;
   font-size: clamp(1.25rem, 0.3125rem + 1.0417vw, 1.5625rem);
   border-radius: 10px;
@@ -320,7 +373,7 @@
 }
 
 .form-submit:hover {
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .visually-hidden {
