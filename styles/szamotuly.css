@@ -181,17 +181,60 @@
 }
 
 .modal {
-  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  display: none;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.90);
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  cursor: pointer;
+}
+
+.modal.popup_is-opened {
+  display: flex;
 }
 
 .modal__content {
+  position: relative;
   display: grid;
   column-gap: 10vw;
   grid-template-columns: 40% 1fr;
   background-color: var(--color-bg-secondary);
+  max-width: 1400px;
+  width: 100%;
+  max-height: 90vh;
+  cursor: default;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: var(--color-brand-normal);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+.modal__close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+}
+
+.modal__close:focus {
+  outline: 2px solid var(--color-brand-active);
+  outline-offset: 2px;
 }
 
 .modal__text {
@@ -216,15 +259,17 @@
 
 .modal__text span {
   font-weight: 400;
+  max-width: 545px;
 }
 
 .modal__list {
   font-weight: 400;
+  margin-bottom: 16px !important;
 }
 
 .modal__item {
-  list-style-type: disc;
-  margin-left: 25px;
+  list-style-type: disc !important;
+  margin-left: 25px !important;
 }
 
 /* benefits section */
