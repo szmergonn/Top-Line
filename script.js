@@ -44,12 +44,12 @@ const modalTemplates = [
 
 // Images for modals
 const modalImages = [
-  "img/modal1.jpg", // for Druk UV
-  "img/modal2.jpg", // for Frezowanie CNC
-  "img/modal3.jpg", // for Reklama wizualna
-  "img/modal1__1000.jpg", // for Druk UV 1000px
-  "img/modal2__1000.jpg", // for Frezowanie CNC 1000px
-  "img/modal3__1000.jpg", // for Reklama wizualna 1000px
+  "img/modal1.webp", // for Druk UV
+  "img/modal2.webp", // for Frezowanie CNC
+  "img/modal3.webp", // for Reklama wizualna
+  "img/modal1__1000.webp", // for Druk UV 1000px
+  "img/modal2__1000.webp", // for Frezowanie CNC 1000px
+  "img/modal3__1000.webp", // for Reklama wizualna 1000px
 ];
 
 // Variable to track the current open modal window
