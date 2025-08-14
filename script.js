@@ -39,7 +39,7 @@ const modalTemplates = [
     <li class="modal__item">na ramie aluminiowej z wymiennym licem z plexi lub poliwęglanu</li>
     <li class="modal__item">z napinanym licem (dowolny rozmiar)</li>
    </ul>
-  <p class="modal__paragraph">Tworzymy również meble reklamowe. Dzięki kompleksowemu podejściu do potrzeb klienta proponujemy gotowe zestawy  dostosowowane do wymogów zleceniodawców zarówno pod kątem szerokości jak i głębokości półek, kolorystyki asortymentu uzupełniającego, tj. haków, listew do umieszczenia cen czy też wykonywanych na zmówienie  specjalnych uchwytów pod określony produkt. Nasze regały są malowane  proszkowo, natomiast klient ma możliwość wyboru kolorystyki według  palety RAL.</p>`,
+  <p class="modal__paragraph">Tworzymy również meble reklamowe. Dzięki kompleksowemu podejściu do potrzeb klienta proponujemy gotowe zestawy  dostosowane do wymogów zleceniodawców zarówno pod kątem szerokości jak i głębokości półek, kolorystyki asortymentu uzupełniającego, tj. haków, listew do umieszczenia cen czy też wykonywanych na zmówienie  specjalnych uchwytów pod określony produkt. Nasze regały są malowane  proszkowo, natomiast klient ma możliwość wyboru kolorystyki według  palety RAL.</p>`,
 ];
 
 // Images for modals
@@ -47,7 +47,13 @@ const modalImages = [
   "img/modal1.jpg", // for Druk UV
   "img/modal2.jpg", // for Frezowanie CNC
   "img/modal3.jpg", // for Reklama wizualna
+  "img/modal1__1000.jpg", // for Druk UV 1000px
+  "img/modal2__1000.jpg", // for Frezowanie CNC 1000px
+  "img/modal3__1000.jpg", // for Reklama wizualna 1000px
 ];
+
+// Variable to track the current open modal window
+let currentModalIndex = null;
 
 // Check if menu elements exist before adding event handlers
 if (burgerCheckbox && menu && header) {
@@ -150,25 +156,50 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Function to determine the correct image index
+function getImageIndex(modalIndex) {
+  // If screen width is less than 1000px, use images with __1000px suffix
+  return window.innerWidth < 1000 ? modalIndex + 3 : modalIndex;
+}
+
 function fillModal(modalIndex) {
   const modal = document.querySelector(".modal");
   const modalText = modal.querySelector(".modal__text");
   const modalImage = modal.querySelector("img");
 
+  // Save the current modal index
+  currentModalIndex = modalIndex;
+
   modalText.innerHTML = modalTemplates[modalIndex];
-  modalImage.src = modalImages[modalIndex];
+  
+  // Determine image index based on screen width
+  const imageIndex = getImageIndex(modalIndex);
+  modalImage.src = modalImages[imageIndex];
+}
+
+// Function to update image in the open modal window
+function updateModalImage() {
+  if (currentModalIndex !== null) {
+    const modal = document.querySelector(".modal");
+    const modalImage = modal.querySelector("img");
+    
+    if (modal.classList.contains("popup_is-opened")) {
+      const imageIndex = getImageIndex(currentModalIndex);
+      modalImage.src = modalImages[imageIndex];
+    }
+  }
 }
 
 function openModal(modal) {
   document.addEventListener("keydown", closeModalByEscape);
   modal.addEventListener("click", handleCloseModalByClick);
-  
+
   // Add close button event listener
   const closeButton = modal.querySelector(".modal__close");
   if (closeButton) {
     closeButton.addEventListener("click", () => closeModal(modal));
   }
-  
+
   modal.classList.add("popup_is-opened");
   body.classList.add("no-scroll");
 }
@@ -176,15 +207,18 @@ function openModal(modal) {
 function closeModal(modal) {
   document.removeEventListener("keydown", closeModalByEscape);
   modal.removeEventListener("click", handleCloseModalByClick);
-  
+
   // Remove close button event listener
   const closeButton = modal.querySelector(".modal__close");
   if (closeButton) {
     closeButton.removeEventListener("click", () => closeModal(modal));
   }
-  
+
   modal.classList.remove("popup_is-opened");
   body.classList.remove("no-scroll");
+  
+  // Reset the current modal index
+  currentModalIndex = null;
 }
 
 function closeModalByEscape(event) {
@@ -197,7 +231,16 @@ function closeModalByEscape(event) {
 }
 
 function handleCloseModalByClick(evt) {
-  if (evt.target === evt.currentTarget || evt.target.classList.contains("popup__close") || evt.target.closest(".modal__close")) {
+  if (
+    evt.target === evt.currentTarget ||
+    evt.target.classList.contains("popup__close") ||
+    evt.target.closest(".modal__close")
+  ) {
     closeModal(evt.currentTarget);
   }
 }
+
+// Window resize event handler to update image in modal window
+window.addEventListener("resize", () => {
+  updateModalImage();
+});

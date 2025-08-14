@@ -152,8 +152,8 @@
 }
 
 .production__image {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
@@ -209,6 +209,13 @@
   cursor: default;
 }
 
+.modal__content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .modal__close {
   position: absolute;
   top: 20px;
@@ -243,7 +250,7 @@
   justify-content: center;
   color: var(--color-brand-normal);
   line-height: var(--lh-120);
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .modal__title {
