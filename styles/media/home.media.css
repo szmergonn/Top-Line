@@ -1,0 +1,328 @@
+/* =========================
+   Home page responsive
+   ========================= */
+
+@media screen and (max-width: 1440px) {
+  /* services section max=1440px*/
+  .services__title {
+    margin-top: 38px;
+    font-size: clamp(1.25rem, 0.4643rem + 1.6369vw, 1.9375rem);
+  }
+
+  .services {
+    margin-bottom: 73px;
+  }
+
+  .services__card {
+    height: 653px;
+  }
+
+  /* equipment section max=1440px*/
+  .equipment__title {
+    padding-top: 77px;
+    margin-bottom: 32px;
+    font-size: clamp(1.9375rem, 0.2897rem + 5.7692vw, 3.8125rem);
+  }
+
+  .equipment__image {
+    margin-bottom: 11px;
+  }
+
+  .equipment__card-title {
+    margin-bottom: 17px;
+  }
+
+  .equipment__description {
+    max-width: 265px;
+  }
+
+  /* portfolio section max=1440px*/
+  .portfolio {
+    padding-top: 11px;
+  }
+
+  .portfolio__title {
+    font-size: clamp(1.9375rem, 0.2897rem + 5.7692vw, 3.8125rem);
+  }
+
+  /* contact section max=1440px*/
+  .contact {
+    padding-top: 82px;
+  }
+
+  .contact__title {
+    margin-bottom: 4px;
+    font-size: clamp(1.9375rem, 0.2897rem + 5.7692vw, 3.8125rem);
+  }
+
+  .contact__buttons {
+    gap: 23px;
+    margin-bottom: 138px;
+  }
+
+  .contact__button {
+    padding: 5px 14px;
+  }
+
+  .contact-footer {
+    height: 97px;
+  }
+
+  .contact__ellipse {
+    width: 1444px;
+    height: 721px;
+    top: 4vh;
+  }
+
+  .contact__description {
+    margin-bottom: 39px;
+  }
+
+  .contact-footer__address,
+  .contact-footer__copyright {
+    font-size: clamp(0.5rem, -0.2951rem + 2.9586vw, 1.125rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* services section max=768px*/
+  .services {
+    margin-top: 81px;
+    margin-bottom: 56px;
+  }
+
+  .services__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services__card {
+    justify-content: flex-end;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .card--building {
+    background-image: url(../img/oznakowanie-budynkow-768.webp);
+  }
+  .card--vehicles {
+    background-image: url(../img/oklejanie-pojazdow-768.webp);
+  }
+  .card--interiors {
+    background-image: url(../img/wyposazenie-wnetrz-768.webp);
+  }
+  .card--signs {
+    background-image: url(../img/kasetony-reklamowe-768.webp);
+  }
+
+  .services__title {
+    font-size: clamp(0.8125rem, 0.2559rem + 2.071vw, 1.25rem);
+    margin-bottom: 37px;
+  }
+
+  .services__card .overlay {
+    background: linear-gradient(0deg, #000 0.02%, rgba(0, 0, 0, 0) 49.96%);
+  }
+
+  /* equipment section max=768px*/
+  .equipment {
+    padding-bottom: 75px;
+  }
+
+  .equipment__title {
+    text-align: center;
+    font-size: clamp(1.25rem, 0.3754rem + 3.2544vw, 1.9375rem);
+    max-width: 457px;
+    margin: 0 auto;
+    padding-top: 56px;
+    margin-bottom: 34px;
+  }
+
+  .equipment__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 48px;
+    text-align: center;
+  }
+
+  .equipment__image {
+    margin-bottom: 28px;
+  }
+
+  .equipment__card-title {
+    font-size: clamp(1rem, 0.682rem + 1.1834vw, 1.25rem);
+    margin-bottom: 0;
+  }
+
+  .equipment__description {
+    font-size: clamp(0.6875rem, 0.449rem + 0.8876vw, 0.875rem);
+    max-width: 344px;
+  }
+
+  /* portfolio section max=768px*/
+  .portfolio__title {
+    max-width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(1.25rem, 0.3754rem + 3.2544vw, 1.9375rem);
+    padding-top: 53px;
+    margin-bottom: 33px;
+  }
+
+  #portfolio .splide__pagination__page,
+  #portfolio .splide__pagination__page.is-active {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* contact section max=768px*/
+  .contact {
+    padding-top: 206px;
+  }
+
+  .contact__title {
+    font-size: clamp(1.5625rem, 1.0854rem + 1.7751vw, 1.9375rem);
+  }
+
+  .contact__description {
+    font-size: clamp(0.6875rem, 0.449rem + 0.8876vw, 0.875rem);
+    margin-bottom: 36px;
+  }
+
+  .contact__buttons {
+    margin-bottom: 120px;
+  }
+
+  .contact-footer {
+    height: 128px;
+  }
+
+  .contact-footer__company {
+    font-size: 0.5rem;
+  }
+
+  .contact-footer__address,
+  .contact-footer__copyright {
+    font-size: 0.5rem;
+  }
+
+  .contact__icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .contact__ellipse {
+    width: 1537px;
+    height: 863px;
+    top: 8vh;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  /* services section max=430px*/
+  .services {
+    margin-bottom: 39px;
+    margin-top: -2px;
+  }
+
+  .services__title {
+    font-size: 12px;
+    margin-bottom: 21px;
+  }
+
+  .services__list {
+    row-gap: 12px;
+  }
+
+  .services__card {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* equipment section max=430px*/
+  .equipment {
+    padding-bottom: 34px;
+  }
+
+  .equipment__list {
+    row-gap: 28px;
+  }
+
+  .equipment__title {
+    padding-top: 34px;
+    margin-bottom: 15px;
+  }
+
+  .equipment__image {
+    margin-bottom: 15px;
+  }
+
+  .equipment__card-title {
+    margin-bottom: 7px;
+  }
+
+  /* portfolio section max=430px*/
+  .portfolio__title {
+    max-width: 275px;
+    padding-top: 24px;
+    margin-bottom: 28px;
+  }
+
+  /* contact section max=430px*/
+  .contact {
+    padding-top: 80px;
+  }
+
+  .contact__title {
+    margin-bottom: 4px;
+  }
+
+  .contact__description {
+    margin-bottom: 18px;
+    font-size: clamp(0.75rem, 0.9318rem + -0.9091vw, 0.6875rem);
+  }
+
+  .contact__button {
+    padding: 8px 13px;
+  }
+
+  .contact__buttons {
+    margin-bottom: 59px;
+  }
+
+  .contact__icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .contact-footer {
+    height: 76px;
+  }
+
+  .contact__text {
+    font-size: clamp(0.5rem, -0.9545rem + 7.2727vw, 1rem);
+  }
+
+  .contact__ellipse {
+    width: 843px;
+    height: 473px;
+    top: 7vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* services section max=320px*/
+  .services__title {
+    margin-bottom: 12px;
+  }
+
+  /* portfolio section max=320px*/
+  #portfolio .splide__pagination__page,
+  #portfolio .splide__pagination__page.is-active {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* contact section max=320px*/
+  .contact__button {
+    padding: 4px 8px;
+  }
+}

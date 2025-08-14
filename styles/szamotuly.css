@@ -243,6 +243,7 @@
   justify-content: center;
   color: var(--color-brand-normal);
   line-height: var(--lh-120);
+  padding-right: 20px;
 }
 
 .modal__title {
