@@ -154,7 +154,16 @@ document.addEventListener("DOMContentLoaded", () => {
       openModal(modal);
     });
   });
+  preloadModalImages();
 });
+
+// Function to preload all modal images
+function preloadModalImages() {
+  modalImages.forEach((imageSrc) => {
+    const img = new Image();
+    img.src = imageSrc;
+  });
+}
 
 // Function to determine the correct image index
 function getImageIndex(modalIndex) {
