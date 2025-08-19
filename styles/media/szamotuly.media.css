@@ -30,7 +30,7 @@
   /* production section max=1440px */
   .production__title {
     font-size: clamp(1.25rem, -0.1071rem + 2.8274vw, 2.4375rem);
-    max-width: 600px;
+    max-width: 820px;
   }
 
   .production__item-title {
@@ -41,7 +41,6 @@
   /* benefits section max=1440px */
   .benefits__title {
     font-size: clamp(1.25rem, -0.1071rem + 2.8274vw, 2.4375rem);
-    max-width: 430px;
   }
 
   .benefits__item-title {

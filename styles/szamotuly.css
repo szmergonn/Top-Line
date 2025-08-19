@@ -205,6 +205,7 @@
   background-color: var(--color-bg-secondary);
   max-width: 1400px;
   width: 100%;
+  overflow-y: auto;
   max-height: 90vh;
   cursor: default;
 }
