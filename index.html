@@ -244,11 +244,13 @@
           </div>
         </div>
 
-        <form class="footer-form" id="contactForm">
+        <form class="footer-form" name="form" id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-field">
               <label for="email" class="visually-hidden">Adres e-mail</label>
-              <input type="email" id="email" name="email" placeholder="Twój adres e-mail" inputmode="email" />
+              <input type="email" id="email" name="email" placeholder="Twój adres e-mail" inputmode="email"/>
+              <p class="error" id="emailError">Podaj prawidłowy adres e-mail</p>
+              <p class="error email-required">Pole jest wymagane</p>
             </div>
 
             <div class="form-field">
@@ -261,18 +263,20 @@
                 placeholder="Twój numer telefonu"
                 inputmode="tel"
               />
+              <p class="error" id="phoneError">Podaj prawidłowy numer</p>
+              <p class="error phone-required">Pole jest wymagane</p>
             </div>
           </div>
 
-          <div class="form-field">
+          <div class="form-field form-message">
             <label for="message" class="visually-hidden">Wiadomość</label>
             <textarea
               id="message"
               name="message"
-              minlength="10"
               required
               placeholder="Opisz swoje zapytanie / bądź i Twoją prośbę o kontakt. Im bardziej szczegółowych informacji udzielisz, tym lepiej będziemy Ci w stanie doradzić/dokładniej wycenić Twój projekt."
             ></textarea>
+            <p class="error" id="messageError">Podaj szczegóły zapytania</p>
           </div>
 
           <button class="form-submit" type="submit">Wyślij wiadomość akceptując politykę prywatności</button>

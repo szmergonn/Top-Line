@@ -180,7 +180,7 @@ function fillModal(modalIndex) {
   currentModalIndex = modalIndex;
 
   modalText.innerHTML = modalTemplates[modalIndex];
-  
+
   // Determine image index based on screen width
   const imageIndex = getImageIndex(modalIndex);
   modalImage.src = modalImages[imageIndex];
@@ -191,7 +191,7 @@ function updateModalImage() {
   if (currentModalIndex !== null) {
     const modal = document.querySelector(".modal");
     const modalImage = modal.querySelector("img");
-    
+
     if (modal.classList.contains("popup_is-opened")) {
       const imageIndex = getImageIndex(currentModalIndex);
       modalImage.src = modalImages[imageIndex];
@@ -225,7 +225,7 @@ function closeModal(modal) {
 
   modal.classList.remove("popup_is-opened");
   body.classList.remove("no-scroll");
-  
+
   // Reset the current modal index
   currentModalIndex = null;
 }
@@ -252,4 +252,56 @@ function handleCloseModalByClick(evt) {
 // Window resize event handler to update image in modal window
 window.addEventListener("resize", () => {
   updateModalImage();
+});
+
+// Validation form
+const contactForm = document.forms.form;
+
+const emailField = contactForm.email;
+const phoneField = contactForm.phone;
+const messageField = contactForm.message;
+
+const emailError = contactForm.querySelector("#emailError");
+const phoneError = contactForm.querySelector("#phoneError");
+const messageError = contactForm.querySelector("#messageError");
+
+const emailRequired = contactForm.querySelector(".email-required");
+const phoneRequired = contactForm.querySelector(".phone-required");
+
+const emailRe = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const phoneRe = /^(?:\+48|0048|48)?[4-8]\d{8}$/;
+
+contactForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+
+  // email validation
+  if (!emailField.value.trim()) {
+    emailRequired.style.display = "block";
+    emailError.style.display = "none";
+  } else if (!emailRe.test(emailField.value.trim())) {
+    emailRequired.style.display = "none";
+    emailError.style.display = "block";
+  } else {
+    emailRequired.style.display = "none";
+    emailError.style.display = "none";
+  }
+
+  // phone validation
+  if (!phoneField.value.trim()) {
+    phoneRequired.style.display = "block";
+    phoneError.style.display = "none";
+  } else if (!phoneRe.test(phoneField.value.trim())) {
+    phoneRequired.style.display = "none";
+    phoneError.style.display = "block";
+  } else {
+    phoneRequired.style.display = "none";
+    phoneError.style.display = "none";
+  }
+
+  // message validation
+  if (!messageField.value.trim()) {
+    messageError.style.display = "block";
+  } else {
+    messageError.style.display = "none";
+  }
 });
