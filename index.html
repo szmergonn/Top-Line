@@ -244,11 +244,18 @@
           </div>
         </div>
 
-        <form class="footer-form" name="form" id="contactForm" novalidate>
+        <form
+          action="https://formspree.io/f/mldwqnay"
+          method="POST"
+          class="footer-form"
+          name="form"
+          id="contactForm"
+          novalidate
+        >
           <div class="form-row">
             <div class="form-field">
               <label for="email" class="visually-hidden">Adres e-mail</label>
-              <input type="email" id="email" name="email" placeholder="Twój adres e-mail" inputmode="email"/>
+              <input type="email" id="email" name="email" placeholder="Twój adres e-mail" inputmode="email" />
               <p class="error" id="emailError">Podaj prawidłowy adres e-mail</p>
               <p class="error email-required">Pole jest wymagane</p>
             </div>
@@ -279,7 +286,9 @@
             <p class="error" id="messageError">Podaj szczegóły zapytania</p>
           </div>
 
-          <button class="form-submit form-submit-inactive" type="submit">Wyślij wiadomość akceptując politykę prywatności</button>
+          <button class="form-submit form-submit-inactive" type="submit">
+            Wyślij wiadomość akceptując politykę prywatności
+          </button>
 
           <p class="form-status" id="formStatus" aria-live="polite"></p>
         </form>

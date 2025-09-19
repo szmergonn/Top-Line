@@ -272,13 +272,13 @@ const phoneRequired = contactForm.querySelector(".phone-required");
 const emailRe = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const phoneRe = /^(?:\+48|0048|48)?[4-8]\d{8}$/;
 
-// Функция для проверки валидности всех полей
+// Function to check the validity of all fields
 function checkFormValidity() {
   const isEmailValid = emailField.value.trim() && emailRe.test(emailField.value.trim());
   const isPhoneValid = phoneField.value.trim() && phoneRe.test(phoneField.value.trim());
   const isMessageValid = messageField.value.trim();
 
-  // Если все поля валидны, удаляем класс inactive
+  // If all fields are valid, remove the inactive class
   if (isEmailValid && isPhoneValid && isMessageValid) {
     submitBtn.classList.remove("form-submit-inactive");
   } else {
@@ -286,7 +286,7 @@ function checkFormValidity() {
   }
 }
 
-// Функция валидации email
+// Email validation function
 function validateEmail() {
   if (!emailField.value.trim()) {
     emailRequired.style.display = "block";
@@ -303,7 +303,7 @@ function validateEmail() {
   }
 }
 
-// Функция валидации телефона
+// Phone validation function
 function validatePhone() {
   if (!phoneField.value.trim()) {
     phoneRequired.style.display = "block";
@@ -320,7 +320,7 @@ function validatePhone() {
   }
 }
 
-// Функция валидации сообщения
+// Message validation function
 function validateMessage() {
   if (!messageField.value.trim()) {
     messageError.style.display = "block";
@@ -331,7 +331,7 @@ function validateMessage() {
   }
 }
 
-// Обработчики событий для проверки в реальном времени
+// Event handlers for real-time verification
 emailField.addEventListener("input", () => {
   validateEmail();
   checkFormValidity();
@@ -362,25 +362,63 @@ messageField.addEventListener("blur", () => {
   checkFormValidity();
 });
 
-// Обработчик отправки формы
+// Form submission handler
 contactForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
-  // Валидация всех полей
+  // Validation of all fields
   const isEmailValid = validateEmail();
   const isPhoneValid = validatePhone();
   const isMessageValid = validateMessage();
 
-  // Проверка состояния кнопки
+  // Checking the status of the button
   checkFormValidity();
 
-  // Если все поля валидны, можно отправлять форму
+  // If all fields are valid, the form can be submitted
   if (isEmailValid && isPhoneValid && isMessageValid) {
-    // Здесь код для отправки формы
-    console.log("Форма готова к отправке!");
-    // Например: отправка данных на сервер
+    submitForm();
   }
 });
 
-// Начальная проверка при загрузке страницы
+// Form submission function
+async function submitForm() {
+  const formStatus = document.getElementById("formStatus");
+
+  try {
+    // Showing that sending is in progress
+    formStatus.textContent = "Wysyłanie...";
+    submitBtn.disabled = true;
+
+    // Create form data
+    const formData = new FormData(contactForm);
+
+    // Send to Formspree
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      // Sent successfully
+      formStatus.textContent = "Wiadomość została wysłana pomyślnie! Skontaktujemy się z Tobą wkrótce.";
+      formStatus.style.color = "green";
+      contactForm.reset(); // Clear the form
+      checkFormValidity(); // Update button status
+    } else {
+      throw new Error("Network error");
+    }
+  } catch (error) {
+    // Error sending
+    formStatus.textContent = "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.";
+    formStatus.style.color = "red";
+  } finally {
+    // Turn the button back on
+    submitBtn.disabled = false;
+  }
+}
+
+// Initial check when loading the page
 checkFormValidity();
