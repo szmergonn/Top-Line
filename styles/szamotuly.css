@@ -417,6 +417,37 @@
   flex: 1;
 }
 
+.recaptcha-status {
+  display: none !important;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: none;
+}
+
+.recaptcha-status.loading {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  display: block;
+}
+
+.recaptcha-status.success {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  display: block;
+}
+
+.recaptcha-status.error {
+  background-color: #ffebee;
+  color: #c62828;
+  display: block;
+}
+
+.form-status {
+  color: #f7f7f7;
+}
+
 .form-submit {
   width: 100%;
   background-color: var(--color-brand-active);
@@ -435,7 +466,7 @@
 
 .form-submit.form-submit-inactive {
   background-color: #f7f7f7;
-  color: #c0c0c0; 
+  color: #c0c0c0;
   cursor: not-allowed;
 }
 

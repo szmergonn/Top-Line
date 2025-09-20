@@ -362,8 +362,8 @@ messageField.addEventListener("blur", () => {
   checkFormValidity();
 });
 
-// Form submission handler
-contactForm.addEventListener("submit", (evt) => {
+// Form submission handler with reCAPTCHA
+contactForm.addEventListener("submit", async (evt) => {
   evt.preventDefault();
 
   // Validation of all fields
@@ -374,14 +374,14 @@ contactForm.addEventListener("submit", (evt) => {
   // Checking the status of the button
   checkFormValidity();
 
-  // If all fields are valid, the form can be submitted
+  // If all fields are valid, doing reCAPTCHA
   if (isEmailValid && isPhoneValid && isMessageValid) {
-    submitForm();
+    await executeRecaptchaAndSubmit();
   }
 });
 
-// Form submission function
-async function submitForm() {
+// Form submission function with reCAPTCHA
+async function submitForm(recaptchaToken) {
   const formStatus = document.getElementById("formStatus");
 
   try {
@@ -405,6 +405,12 @@ async function submitForm() {
       // Sent successfully
       formStatus.textContent = "Wiadomość została wysłana pomyślnie! Skontaktujemy się z Tobą wkrótce.";
       formStatus.style.color = "green";
+
+      // Hide reCAPTCHA status after successful submission
+      if (recaptchaStatus) {
+        recaptchaStatus.style.display = "none";
+      }
+
       contactForm.reset(); // Clear the form
       checkFormValidity(); // Update button status
     } else {
@@ -422,3 +428,47 @@ async function submitForm() {
 
 // Initial check when loading the page
 checkFormValidity();
+
+// ========== NEW FEATURES FOR reCAPTCHA ==========
+const SITE_KEY = "6Lcdtc8rAAAAAGL9YbULdZNBsOQMrt5WZ09Haa6p";
+const recaptchaStatus = document.getElementById("recaptchaStatus");
+
+// Main function for executing reCAPTCHA and sending
+async function executeRecaptchaAndSubmit() {
+  try {
+    // Block the button without showing the status
+    submitBtn.disabled = true;
+
+    // Perform reCAPTCHA
+    const token = await executeRecaptcha();
+
+    // If the token is received, send the form
+    if (token) {
+      await submitForm(token);
+    }
+  } catch (error) {
+    console.error("reCAPTCHA error:", error);
+    const formStatus = document.getElementById("formStatus");
+    formStatus.textContent = "Wystąpił błąd. Spróbuj ponownie.";
+    formStatus.style.color = "red";
+    submitBtn.disabled = false;
+  }
+}
+
+// Performing reCAPTCHA
+function executeRecaptcha() {
+  return new Promise((resolve, reject) => {
+    grecaptcha.ready(() => {
+      grecaptcha
+        .execute(SITE_KEY, { action: "contact_form" })
+        .then((token) => {
+          console.log("reCAPTCHA token received:", token);
+          resolve(token);
+        })
+        .catch(reject);
+    });
+  });
+}
+
+// Display reCAPTCHA status
+function showRecaptchaStatus(type, message) {}
