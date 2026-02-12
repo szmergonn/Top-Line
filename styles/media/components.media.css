@@ -198,7 +198,7 @@
 /* partners section */
 .partners {
   margin-top: 40px;
-  margin-bottom: 147px;
+  margin-bottom: 40px;
 }
 
 .partners__list {
@@ -248,7 +248,7 @@
   /* partners section max=1440px*/
   .partners {
     margin-top: 40px;
-    margin-bottom: 102px;
+    margin-bottom: 40px;
   }
 
   .partners__item img {
@@ -336,8 +336,8 @@
   }
 
   .header__menu .header__link.header__link_active {
-    background: #151515;
-    color: #c2d30d;
+    background: var(--color-bg-secondary);
+    color: var(--color-brand-active);
   }
 
   .burger__wrap {
@@ -350,7 +350,7 @@
     display: block;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: var(--color-white);
   }
 
   .burger-checkbox:checked + .burger::before {
@@ -404,7 +404,6 @@
   .partners {
     position: relative;
     margin-top: -63px;
-    margin-bottom: 115px;
     z-index: 2;
   }
 
@@ -458,11 +457,5 @@
 
   .overlay {
     background: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-  }
-
-  /* partners section max=430px*/
-  .partners {
-    margin-top: -46px;
-    margin-bottom: 80px;
   }
 }

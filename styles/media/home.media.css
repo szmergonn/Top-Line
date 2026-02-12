@@ -64,8 +64,8 @@
     padding: 5px 14px;
   }
 
-  .contact-footer {
-    height: 97px;
+  .contact-footer__content {
+    padding: 15px 0;
   }
 
   .contact__ellipse {
@@ -80,15 +80,16 @@
 
   .contact-footer__address,
   .contact-footer__copyright {
-    font-size: clamp(0.5rem, -0.2951rem + 2.9586vw, 1.125rem);
+    font-size: clamp(0.6875rem, -0.2951rem + 2.9586vw, 1.125rem);
   }
 }
 
 @media screen and (max-width: 768px) {
   /* services section max=768px*/
   .services {
-    margin-top: 81px;
-    margin-bottom: 56px;
+    margin-bottom: 0;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .services__list {
@@ -103,16 +104,16 @@
   }
 
   .card--building {
-    background-image: url(../img/oznakowanie-budynkow-768.webp);
+    background-image: url(../../img/oznakowanie-budynkow-768.webp);
   }
   .card--vehicles {
-    background-image: url(../img/oklejanie-pojazdow-768.webp);
+    background-image: url(../../img/oklejanie-pojazdow-768.webp);
   }
   .card--interiors {
-    background-image: url(../img/wyposazenie-wnetrz-768.webp);
+    background-image: url(../../img/wyposazenie-wnetrz-768.webp);
   }
   .card--signs {
-    background-image: url(../img/kasetony-reklamowe-768.webp);
+    background-image: url(../../img/kasetony-reklamowe-768.webp);
   }
 
   .services__title {
@@ -192,17 +193,24 @@
     margin-bottom: 120px;
   }
 
-  .contact-footer {
-    height: 128px;
+  .footer__title {
+    display: block;
+    font-size: clamp(1.5625rem, 1.0854rem + 1.7751vw, 1.9375rem);
+    margin-right: 130px;
   }
 
-  .contact-footer__company {
-    font-size: 0.5rem;
+  .contact-footer__content {
+    flex-direction: column;
+    gap: 12px;
+    padding: 50px 0;
   }
 
-  .contact-footer__address,
-  .contact-footer__copyright {
-    font-size: 0.5rem;
+  .contact-footer__company + .contact-footer__company {
+    text-align: left;
+  }
+
+  .contact-footer__author {
+    text-align: center;
   }
 
   .contact__icon {
@@ -220,8 +228,8 @@
 @media screen and (max-width: 430px) {
   /* services section max=430px*/
   .services {
-    margin-bottom: 39px;
-    margin-top: -2px;
+    padding-top: 27px;
+    padding-bottom: 24px;
   }
 
   .services__title {
@@ -291,10 +299,6 @@
   .contact__icon {
     width: 17px;
     height: 17px;
-  }
-
-  .contact-footer {
-    height: 76px;
   }
 
   .contact__text {

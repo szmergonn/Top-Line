@@ -1,5 +1,6 @@
 /* services section */
 .services {
+  padding-top: 72px;
   margin-bottom: 100px;
 }
 
@@ -222,17 +223,26 @@
 
 /* footer section */
 .contact-footer {
-  display: flex;
-  align-items: center;
-  height: 127px;
   background-color: var(--color-bg-primary);
   color: var(--color-brand-normal);
 }
 
+.footer__title {
+  display: none;
+}
+
+.contact-footer__addresses {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
 .contact-footer__content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 39px 0;
 }
 
 .contact-footer__company {
@@ -241,12 +251,16 @@
   line-height: var(--lh-120);
 }
 
+.contact-footer__company + .contact-footer__company {
+  text-align: center;
+}
+
 .contact-footer__address,
 .contact-footer__copyright {
   font-weight: 400;
   font-size: 1.125rem;
 }
-
+.contact-footer__rights,
 .contact-footer__author {
   text-align: right;
 }
