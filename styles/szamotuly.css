@@ -1,4 +1,48 @@
-/* header */
+:root {
+  /* fonts */
+  --font-primary: "Ubuntu", sans-serif;
+  --font-secondary: "Lora", sans-serif;
+
+  /* colors */
+  --color-bg-primary: #101010;
+  --color-bg-secondary: #151515;
+  --color-white: #fff;
+  --color-brand-normal: #f9fbe7;
+  --color-brand-active: #c2d30d;
+  --color-brand-hover: #747f08;
+
+  /* line-height */
+  --lh-120: 1.2;
+}
+
+.page {
+  font-family: var(--font-primary, sans-serif);
+  font-weight: 700;
+  background-color: var(--color-bg-primary);
+}
+
+.container {
+  max-width: 1720px;
+  margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.header__logo-image {
+  width: clamp(2.5rem, 4vw, 4.5rem);
+  height: clamp(1.6875rem, 2.7vw, 3rem);
+  object-fit: contain;
+}
+
 .header__back-link {
   color: var(--color-brand-normal);
   font-size: 1.563rem;
@@ -6,12 +50,78 @@
   line-height: var(--lh-120);
 }
 
-/* hero section */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 557px;
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero__content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  line-height: var(--lh-120);
+}
+
+.hero__title {
+  font-size: 3.813rem;
+  color: var(--color-brand-normal);
+  margin-bottom: 24px;
+  max-width: 977px;
+}
+
 .hero__description {
+  font-weight: 400;
+  font-size: 1.563rem;
+  color: var(--color-white);
   max-width: 969px;
 }
 
-/* services section */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.partners {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.partners__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partners__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .services__item {
   display: flex;
   gap: 162px;
@@ -42,7 +152,6 @@
   line-height: var(--lh-120);
 }
 
-/* advanatges section */
 .advantages {
   margin-bottom: 80px;
 }
@@ -81,7 +190,6 @@
   max-width: 688px;
 }
 
-/* cooperation section */
 .cooperation {
   background-color: var(--color-bg-secondary);
   padding: 57px 0;
@@ -116,7 +224,6 @@
   justify-self: end;
 }
 
-/* production section */
 .production {
   padding-top: 160px;
   padding-bottom: 169px;
@@ -231,7 +338,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   z-index: 10;
 }
 
@@ -281,7 +390,6 @@
   margin-left: 25px !important;
 }
 
-/* benefits section */
 .benefits {
   background-color: var(--color-bg-secondary);
   padding-top: 93px;
@@ -328,7 +436,6 @@
   font-weight: 400;
 }
 
-/*  map section */
 .map {
   width: 100%;
   height: 527px;
@@ -341,7 +448,6 @@
   border: 0;
 }
 
-/* footer section */
 .footer {
   padding-bottom: 80px;
 }
